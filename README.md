@@ -1,1 +1,3 @@
-# zoomcamp-ml-cohort-2026
+# DataTalksClub – Machine Learning Zoomcamp 2026  
+
+**Repo Purpose:** Repository for all course homework and project submissions.
