@@ -1,0 +1,905 @@
+{
+  "generated_at_utc": "2026-11-09T19:49:18+00:00",
+  "requests": [
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-basilan",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Basilan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.05229&latitude=6.56655&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:01+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-basilan.json",
+      "file_sha256": "1ebb367984b8470548b650701de22f59dea68e03bb72d5ee68b2db2602866940",
+      "cached": true
+    },
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-lanao-del-sur",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Lanao del Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.33615&latitude=7.79666&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:03+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-lanao-del-sur.json",
+      "file_sha256": "38a21b4e82f308dd7abe0c7d6d6923e6e30e46acf3856f305d06030ec938f7a9",
+      "cached": true
+    },
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-maguindanao",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Maguindanao",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.38874&latitude=7.02713&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:05+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-maguindanao.json",
+      "file_sha256": "52f32852b96e529fc3681e1451bdd55b36a0ae66d84f321eabc705f02db3d025",
+      "cached": true
+    },
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-maguindanao-del-norte",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Maguindanao del Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.38874&latitude=7.02713&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:06+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-maguindanao-del-norte.json",
+      "file_sha256": "e64dbac7d3623ba6305a24aed8b5eb8fe01bf4cb19d3e4d03f9a217f0dbad55e",
+      "cached": true
+    },
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-maguindanao-del-sur",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Maguindanao del Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.38874&latitude=7.02713&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:08+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-maguindanao-del-sur.json",
+      "file_sha256": "1f95b57a45f6ee9d5335e608158eee9c319556b2621ad3877ef0a29bfc2d2387",
+      "cached": true
+    },
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-sulu",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Sulu",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.12883&latitude=5.97609&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:10+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-sulu.json",
+      "file_sha256": "376231436e0d88ca4bc6f9f19e4399a92538d3f5c5016010fb2bdf7bf1453629",
+      "cached": true
+    },
+    {
+      "artifact": "bangsamoro-autonomous-region-in-muslim-mindanao-tawi-tawi",
+      "region_name": "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "province_name": "Tawi-tawi",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.05636&latitude=5.19542&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:11+00:00",
+      "file": "data\\raw\\nasa\\bangsamoro-autonomous-region-in-muslim-mindanao-tawi-tawi.json",
+      "file_sha256": "74a0fef5a69d682ec3bdbeaae4211d129ba16963453fb031ca9ab9d71971aa0a",
+      "cached": true
+    },
+    {
+      "artifact": "cordillera-administrative-region-car-abra",
+      "region_name": "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "province_name": "Abra",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.80325&latitude=17.57835&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:13+00:00",
+      "file": "data\\raw\\nasa\\cordillera-administrative-region-car-abra.json",
+      "file_sha256": "414f7a246597d7684790567860ba17a854ec975593f204b0878a4352c6de4ce2",
+      "cached": true
+    },
+    {
+      "artifact": "cordillera-administrative-region-car-apayao",
+      "region_name": "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "province_name": "Apayao",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.18757&latitude=18.10578&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:15+00:00",
+      "file": "data\\raw\\nasa\\cordillera-administrative-region-car-apayao.json",
+      "file_sha256": "7daf75d235b6255e3b3d1380ad94956f38f5d42cdee55db49703997b74a62811",
+      "cached": true
+    },
+    {
+      "artifact": "cordillera-administrative-region-car-benguet",
+      "region_name": "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "province_name": "Benguet",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.69898&latitude=16.54275&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:17+00:00",
+      "file": "data\\raw\\nasa\\cordillera-administrative-region-car-benguet.json",
+      "file_sha256": "552af7c64c68e143ff1bee29c63d4287cfe38374b7eeb1215622ee996e120e98",
+      "cached": true
+    },
+    {
+      "artifact": "cordillera-administrative-region-car-ifugao",
+      "region_name": "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "province_name": "Ifugao",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.20738&latitude=16.84857&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:18+00:00",
+      "file": "data\\raw\\nasa\\cordillera-administrative-region-car-ifugao.json",
+      "file_sha256": "5941a4b72a80b662a34340b0536642deb297f091a0e393fc0460bc8959da9754",
+      "cached": true
+    },
+    {
+      "artifact": "cordillera-administrative-region-car-kalinga",
+      "region_name": "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "province_name": "Kalinga",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.27952&latitude=17.43098&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:20+00:00",
+      "file": "data\\raw\\nasa\\cordillera-administrative-region-car-kalinga.json",
+      "file_sha256": "85b19af2c2ce6a6521b23d21deca49a77575f3a2bd541e54b47524a4fca0de55",
+      "cached": true
+    },
+    {
+      "artifact": "cordillera-administrative-region-car-mountain-province",
+      "region_name": "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "province_name": "Mountain Province",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.12924&latitude=17.10132&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:22+00:00",
+      "file": "data\\raw\\nasa\\cordillera-administrative-region-car-mountain-province.json",
+      "file_sha256": "64f2461123b87f3b2859d1783fa0d2be3fc23eb7bde48d3c17fb104249ab30fb",
+      "cached": true
+    },
+    {
+      "artifact": "mimaropa-region-city-of-puerto-princesa",
+      "region_name": "MIMAROPA REGION",
+      "province_name": "City of Puerto Princesa",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=118.73530&latitude=9.73920&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:24+00:00",
+      "file": "data\\raw\\nasa\\mimaropa-region-city-of-puerto-princesa.json",
+      "file_sha256": "7ff073072efff98916cc92d16a5ef6687a925dfbd62c52c537c193aae706af02",
+      "cached": true
+    },
+    {
+      "artifact": "mimaropa-region-marinduque",
+      "region_name": "MIMAROPA REGION",
+      "province_name": "Marinduque",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.96906&latitude=13.38955&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:29+00:00",
+      "file": "data\\raw\\nasa\\mimaropa-region-marinduque.json",
+      "file_sha256": "e9ecf8d5adbbd7467133edff9222b30090177b609bd43f44a618c5b34718ca5f",
+      "cached": true
+    },
+    {
+      "artifact": "mimaropa-region-occidental-mindoro",
+      "region_name": "MIMAROPA REGION",
+      "province_name": "Occidental Mindoro",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.92098&latitude=12.94655&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:31+00:00",
+      "file": "data\\raw\\nasa\\mimaropa-region-occidental-mindoro.json",
+      "file_sha256": "492960efab83b29b01d855be9a436e324c0f0d5b4b1c74470a45823b3c9592ba",
+      "cached": true
+    },
+    {
+      "artifact": "mimaropa-region-oriental-mindoro",
+      "region_name": "MIMAROPA REGION",
+      "province_name": "Oriental Mindoro",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.26322&latitude=12.96708&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:33+00:00",
+      "file": "data\\raw\\nasa\\mimaropa-region-oriental-mindoro.json",
+      "file_sha256": "33d507cc59ea2906343d8c3b88cd9d6ed3299088f64fddcfc9d3faa8bc03e3a9",
+      "cached": true
+    },
+    {
+      "artifact": "mimaropa-region-palawan",
+      "region_name": "MIMAROPA REGION",
+      "province_name": "Palawan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=118.55863&latitude=9.73079&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:35+00:00",
+      "file": "data\\raw\\nasa\\mimaropa-region-palawan.json",
+      "file_sha256": "09232c39d65caee9d857e617893ec14511001d077410737c79ba9459acb063d4",
+      "cached": true
+    },
+    {
+      "artifact": "mimaropa-region-romblon",
+      "region_name": "MIMAROPA REGION",
+      "province_name": "Romblon",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.03952&latitude=12.40767&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:37+00:00",
+      "file": "data\\raw\\nasa\\mimaropa-region-romblon.json",
+      "file_sha256": "6bfd2092fe986c06759a5bd46e2c27100ef7fb084862ebec6ba44e11fc9471c0",
+      "cached": true
+    },
+    {
+      "artifact": "negros-island-region-nir-city-of-bacolod",
+      "region_name": "NEGROS ISLAND REGION (NIR)",
+      "province_name": "City of Bacolod",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.95090&latitude=10.67650&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:39+00:00",
+      "file": "data\\raw\\nasa\\negros-island-region-nir-city-of-bacolod.json",
+      "file_sha256": "618db20b917ee2c3adef230c17b31c46be872d6eee75c8f36fb8c6bf27989699",
+      "cached": true
+    },
+    {
+      "artifact": "negros-island-region-nir-negros-occidental",
+      "region_name": "NEGROS ISLAND REGION (NIR)",
+      "province_name": "Negros Occidental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.98652&latitude=10.31052&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:40+00:00",
+      "file": "data\\raw\\nasa\\negros-island-region-nir-negros-occidental.json",
+      "file_sha256": "44539848746428c997e979f315faede32d8453739061bf5cae1f0c07ca56988e",
+      "cached": true
+    },
+    {
+      "artifact": "negros-island-region-nir-negros-oriental",
+      "region_name": "NEGROS ISLAND REGION (NIR)",
+      "province_name": "Negros Oriental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.03346&latitude=9.60695&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:42+00:00",
+      "file": "data\\raw\\nasa\\negros-island-region-nir-negros-oriental.json",
+      "file_sha256": "98c1c55ccbe930bc36a9060669349de54e5d93996ec28e313e2ac526099a8d34",
+      "cached": true
+    },
+    {
+      "artifact": "negros-island-region-nir-siquijor",
+      "region_name": "NEGROS ISLAND REGION (NIR)",
+      "province_name": "Siquijor",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.58867&latitude=9.18521&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:43+00:00",
+      "file": "data\\raw\\nasa\\negros-island-region-nir-siquijor.json",
+      "file_sha256": "6472e22f229e241f8fa4a14d39bf20e459c17290fe6e30170d65e895d00fd3a7",
+      "cached": true
+    },
+    {
+      "artifact": "region-i-ilocos-region-ilocos-norte",
+      "region_name": "REGION I (ILOCOS REGION)",
+      "province_name": "Ilocos Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.73004&latitude=18.20486&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:45+00:00",
+      "file": "data\\raw\\nasa\\region-i-ilocos-region-ilocos-norte.json",
+      "file_sha256": "81ff49c1b91c71bb7750b2b6a025cdc55f8fc1542621ed3844fcbe427344e830",
+      "cached": true
+    },
+    {
+      "artifact": "region-i-ilocos-region-ilocos-sur",
+      "region_name": "REGION I (ILOCOS REGION)",
+      "province_name": "Ilocos Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.54727&latitude=17.24682&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:47+00:00",
+      "file": "data\\raw\\nasa\\region-i-ilocos-region-ilocos-sur.json",
+      "file_sha256": "ff20de12dbcf11290dc32ee565250273501257d3968ed98c17e2c4687e8a5569",
+      "cached": true
+    },
+    {
+      "artifact": "region-i-ilocos-region-la-union",
+      "region_name": "REGION I (ILOCOS REGION)",
+      "province_name": "La Union",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.42449&latitude=16.58058&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:48+00:00",
+      "file": "data\\raw\\nasa\\region-i-ilocos-region-la-union.json",
+      "file_sha256": "8d517ae7f3b312686e02b03238d20e535045f5bc05ed41a8490d628773ed496e",
+      "cached": true
+    },
+    {
+      "artifact": "region-i-ilocos-region-pangasinan",
+      "region_name": "REGION I (ILOCOS REGION)",
+      "province_name": "Pangasinan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.31960&latitude=15.99313&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:50+00:00",
+      "file": "data\\raw\\nasa\\region-i-ilocos-region-pangasinan.json",
+      "file_sha256": "2c7c7dda3cad52b11b33ceb42ea1048206e478360bf2ccb752385aca9b3cadd6",
+      "cached": true
+    },
+    {
+      "artifact": "region-ii-cagayan-valley-batanes",
+      "region_name": "REGION II (CAGAYAN VALLEY)",
+      "province_name": "Batanes",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.83585&latitude=20.75994&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:51+00:00",
+      "file": "data\\raw\\nasa\\region-ii-cagayan-valley-batanes.json",
+      "file_sha256": "4cd952a227c591e40287d10bbb58eaf577a2f69a96ed4114d274fff139f6ceae",
+      "cached": true
+    },
+    {
+      "artifact": "region-ii-cagayan-valley-cagayan",
+      "region_name": "REGION II (CAGAYAN VALLEY)",
+      "province_name": "Cagayan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.77112&latitude=18.01539&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:53+00:00",
+      "file": "data\\raw\\nasa\\region-ii-cagayan-valley-cagayan.json",
+      "file_sha256": "0ce3ef844872849890eb19620dfbc25fbd85738f2b5822a919b977bf32771e6f",
+      "cached": true
+    },
+    {
+      "artifact": "region-ii-cagayan-valley-isabela",
+      "region_name": "REGION II (CAGAYAN VALLEY)",
+      "province_name": "Isabela",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.96122&latitude=16.98732&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:54+00:00",
+      "file": "data\\raw\\nasa\\region-ii-cagayan-valley-isabela.json",
+      "file_sha256": "b73340b166af91905719e2db4b9d025038086ef105ba0c4a114331d965697a00",
+      "cached": true
+    },
+    {
+      "artifact": "region-ii-cagayan-valley-nueva-vizcaya",
+      "region_name": "REGION II (CAGAYAN VALLEY)",
+      "province_name": "Nueva Vizcaya",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.17172&latitude=16.30549&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:56+00:00",
+      "file": "data\\raw\\nasa\\region-ii-cagayan-valley-nueva-vizcaya.json",
+      "file_sha256": "553dfb9e3717c9aa2de27e1f6470b168be3d395a4bba168df13f291b48117549",
+      "cached": true
+    },
+    {
+      "artifact": "region-ii-cagayan-valley-quirino",
+      "region_name": "REGION II (CAGAYAN VALLEY)",
+      "province_name": "Quirino",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.59547&latitude=16.29451&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:58+00:00",
+      "file": "data\\raw\\nasa\\region-ii-cagayan-valley-quirino.json",
+      "file_sha256": "4cb79760dfc3c5403bd2a7290b04a62de4c0ef47d9b9fc86fb8fd1e1fd656609",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-aurora",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Aurora",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.70042&latitude=15.92337&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:46:59+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-aurora.json",
+      "file_sha256": "312a024bf29058cecd478c6f00a0e5f5d2f7b10d57be626ccde6cbf1728fd537",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-bataan",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Bataan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.45438&latitude=14.66040&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:01+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-bataan.json",
+      "file_sha256": "86bce1e237d11e0067a7b3dfbe54089c8884278ca0956b4921a82e03016ca5d3",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-bulacan",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Bulacan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.05871&latitude=14.97871&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:02+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-bulacan.json",
+      "file_sha256": "1624efb8b2eedf15cb16ad1b967a387d6ed5e5d3adb58959992b52ef3653a575",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-nueva-ecija",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Nueva Ecija",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.02171&latitude=15.61978&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:03+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-nueva-ecija.json",
+      "file_sha256": "98af1972e1252f4f312ae2901ebbcda366abc39a4f5766efbeda26342b8d76d7",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-pampanga",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Pampanga",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.64725&latitude=15.05855&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:05+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-pampanga.json",
+      "file_sha256": "45dfa61698d88d763eba38d32fdfc302557711b2a81ae2238cccaefcc08e0351",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-tarlac",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Tarlac",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.47622&latitude=15.47833&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:06+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-tarlac.json",
+      "file_sha256": "e21d2c5dff0f299f9568735d9c4a6631a040ee23809472b4c964dd18be211049",
+      "cached": true
+    },
+    {
+      "artifact": "region-iii-central-luzon-zambales",
+      "region_name": "REGION III (CENTRAL LUZON)",
+      "province_name": "Zambales",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.14463&latitude=15.28550&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:08+00:00",
+      "file": "data\\raw\\nasa\\region-iii-central-luzon-zambales.json",
+      "file_sha256": "6c31ee6c0d33d81af6ade08056c5ffe2243db0f65c0d4f80101b0ad2875fa461",
+      "cached": true
+    },
+    {
+      "artifact": "region-iv-a-calabarzon-batangas",
+      "region_name": "REGION IV-A (CALABARZON)",
+      "province_name": "Batangas",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.03124&latitude=13.90376&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:09+00:00",
+      "file": "data\\raw\\nasa\\region-iv-a-calabarzon-batangas.json",
+      "file_sha256": "28935a48c87e97b9923bc6ad32f6435f250be9d6fc86de71187aed9740b75e9b",
+      "cached": true
+    },
+    {
+      "artifact": "region-iv-a-calabarzon-cavite",
+      "region_name": "REGION IV-A (CALABARZON)",
+      "province_name": "Cavite",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=120.86983&latitude=14.25456&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:10+00:00",
+      "file": "data\\raw\\nasa\\region-iv-a-calabarzon-cavite.json",
+      "file_sha256": "c406815a02fdee89fbf43b79ac579da3b4356cfb9827622f3625840a78a76108",
+      "cached": true
+    },
+    {
+      "artifact": "region-iv-a-calabarzon-laguna",
+      "region_name": "REGION IV-A (CALABARZON)",
+      "province_name": "Laguna",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.36656&latitude=14.24144&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:12+00:00",
+      "file": "data\\raw\\nasa\\region-iv-a-calabarzon-laguna.json",
+      "file_sha256": "526e3b13973e118c8a9276d03a2d5bf65c1efa78e3cd70aef33c72036d7c3742",
+      "cached": true
+    },
+    {
+      "artifact": "region-iv-a-calabarzon-quezon",
+      "region_name": "REGION IV-A (CALABARZON)",
+      "province_name": "Quezon",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.95618&latitude=14.09162&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:14+00:00",
+      "file": "data\\raw\\nasa\\region-iv-a-calabarzon-quezon.json",
+      "file_sha256": "491da2caefb9f210b22ab9a51e2f63ac351079a50b4a4d0e0f69fa44de2df7b8",
+      "cached": true
+    },
+    {
+      "artifact": "region-iv-a-calabarzon-rizal",
+      "region_name": "REGION IV-A (CALABARZON)",
+      "province_name": "Rizal",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.26321&latitude=14.62346&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:15+00:00",
+      "file": "data\\raw\\nasa\\region-iv-a-calabarzon-rizal.json",
+      "file_sha256": "cbfb36e5fd802dde5887dc798a765f5838c986fc6c3f1e2001f68bbf2b677b02",
+      "cached": true
+    },
+    {
+      "artifact": "region-ix-zamboanga-peninsula-sulu",
+      "region_name": "REGION IX (ZAMBOANGA PENINSULA)",
+      "province_name": "Sulu",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=121.12883&latitude=5.97609&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:17+00:00",
+      "file": "data\\raw\\nasa\\region-ix-zamboanga-peninsula-sulu.json",
+      "file_sha256": "56b2516ae860775a5dccab37a6a2652340d3659307ff7d251066f5eb1bbb9643",
+      "cached": true
+    },
+    {
+      "artifact": "region-ix-zamboanga-peninsula-zamboanga-sibugay",
+      "region_name": "REGION IX (ZAMBOANGA PENINSULA)",
+      "province_name": "Zamboanga Sibugay",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.71480&latitude=7.71986&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:18+00:00",
+      "file": "data\\raw\\nasa\\region-ix-zamboanga-peninsula-zamboanga-sibugay.json",
+      "file_sha256": "953b79a20ccaed22760e1b39e01163200e667270d8a139eb5438d84eb37d175e",
+      "cached": true
+    },
+    {
+      "artifact": "region-ix-zamboanga-peninsula-zamboanga-del-norte",
+      "region_name": "REGION IX (ZAMBOANGA PENINSULA)",
+      "province_name": "Zamboanga del Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.80712&latitude=8.04901&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:20+00:00",
+      "file": "data\\raw\\nasa\\region-ix-zamboanga-peninsula-zamboanga-del-norte.json",
+      "file_sha256": "0033a3940081474de04c748709d0b3d9a6a806dba39c4680bda0535ff8203a5d",
+      "cached": true
+    },
+    {
+      "artifact": "region-ix-zamboanga-peninsula-zamboanga-del-sur",
+      "region_name": "REGION IX (ZAMBOANGA PENINSULA)",
+      "province_name": "Zamboanga del Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.32212&latitude=7.88147&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:21+00:00",
+      "file": "data\\raw\\nasa\\region-ix-zamboanga-peninsula-zamboanga-del-sur.json",
+      "file_sha256": "8aeeb58ceb5db0449fb01b0b8698a8a567c4fe61e6471bffceaef85096118acb",
+      "cached": true
+    },
+    {
+      "artifact": "region-v-bicol-region-albay",
+      "region_name": "REGION V (BICOL REGION)",
+      "province_name": "Albay",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.57401&latitude=13.20357&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:23+00:00",
+      "file": "data\\raw\\nasa\\region-v-bicol-region-albay.json",
+      "file_sha256": "9679580452b35f9f4b66c8086061412155021f36d1b45e4752030c59203e22cd",
+      "cached": true
+    },
+    {
+      "artifact": "region-v-bicol-region-camarines-norte",
+      "region_name": "REGION V (BICOL REGION)",
+      "province_name": "Camarines Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.72350&latitude=14.13971&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:25+00:00",
+      "file": "data\\raw\\nasa\\region-v-bicol-region-camarines-norte.json",
+      "file_sha256": "d1291e58dc62ed6cb802bfd1776a92e07f62066991e3aedab151d7603d1a25e1",
+      "cached": true
+    },
+    {
+      "artifact": "region-v-bicol-region-camarines-sur",
+      "region_name": "REGION V (BICOL REGION)",
+      "province_name": "Camarines Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.25717&latitude=13.70058&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:26+00:00",
+      "file": "data\\raw\\nasa\\region-v-bicol-region-camarines-sur.json",
+      "file_sha256": "e3309dc40904582c3ba00e7a6d8c6b7fc8a354e977aa6e2ee01e66e1fdacc745",
+      "cached": true
+    },
+    {
+      "artifact": "region-v-bicol-region-catanduanes",
+      "region_name": "REGION V (BICOL REGION)",
+      "province_name": "Catanduanes",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.23602&latitude=13.78133&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:27+00:00",
+      "file": "data\\raw\\nasa\\region-v-bicol-region-catanduanes.json",
+      "file_sha256": "d3a0a82e2f2c42763103f69d4fc19a33584c65d0238ca2f54f3864b995230c41",
+      "cached": true
+    },
+    {
+      "artifact": "region-v-bicol-region-masbate",
+      "region_name": "REGION V (BICOL REGION)",
+      "province_name": "Masbate",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.59787&latitude=12.18030&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:29+00:00",
+      "file": "data\\raw\\nasa\\region-v-bicol-region-masbate.json",
+      "file_sha256": "f103449cd13c16780001be22320729af9290dac154138fd3f6cc2398f811a148",
+      "cached": true
+    },
+    {
+      "artifact": "region-v-bicol-region-sorsogon",
+      "region_name": "REGION V (BICOL REGION)",
+      "province_name": "Sorsogon",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.92845&latitude=12.85509&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:30+00:00",
+      "file": "data\\raw\\nasa\\region-v-bicol-region-sorsogon.json",
+      "file_sha256": "61e673de10748e1276d9390d233af65d5ee9c394f0adb8228346547ad762ca98",
+      "cached": true
+    },
+    {
+      "artifact": "region-vi-western-visayas-aklan",
+      "region_name": "REGION VI (WESTERN VISAYAS)",
+      "province_name": "Aklan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.24881&latitude=11.60748&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:32+00:00",
+      "file": "data\\raw\\nasa\\region-vi-western-visayas-aklan.json",
+      "file_sha256": "b93973043bc338d78e82b7377425a9edfad91e646c88fabcd6bac62cdc65d60a",
+      "cached": true
+    },
+    {
+      "artifact": "region-vi-western-visayas-antique",
+      "region_name": "REGION VI (WESTERN VISAYAS)",
+      "province_name": "Antique",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.10172&latitude=11.08064&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:34+00:00",
+      "file": "data\\raw\\nasa\\region-vi-western-visayas-antique.json",
+      "file_sha256": "c2a7feaf924fb53192e4ca005323cd4f228bfb8e84541ecaa3df14c08213fd66",
+      "cached": true
+    },
+    {
+      "artifact": "region-vi-western-visayas-capiz",
+      "region_name": "REGION VI (WESTERN VISAYAS)",
+      "province_name": "Capiz",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.63285&latitude=11.36982&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:35+00:00",
+      "file": "data\\raw\\nasa\\region-vi-western-visayas-capiz.json",
+      "file_sha256": "941a879f8b84282160343f42a598f15bf2b35870bbd23f55f9debb9f2ade51c6",
+      "cached": true
+    },
+    {
+      "artifact": "region-vi-western-visayas-guimaras",
+      "region_name": "REGION VI (WESTERN VISAYAS)",
+      "province_name": "Guimaras",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.61271&latitude=10.57339&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:37+00:00",
+      "file": "data\\raw\\nasa\\region-vi-western-visayas-guimaras.json",
+      "file_sha256": "2deb31708b5b3edec4529ac4b76f2129d2d3e0788161ad7344f1325c6d2e030a",
+      "cached": true
+    },
+    {
+      "artifact": "region-vi-western-visayas-iloilo",
+      "region_name": "REGION VI (WESTERN VISAYAS)",
+      "province_name": "Iloilo",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.59254&latitude=10.99960&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:38+00:00",
+      "file": "data\\raw\\nasa\\region-vi-western-visayas-iloilo.json",
+      "file_sha256": "1fa9979d849554fd9abf36568cf18ddbc3a5ad0c436edf9f6a556515264a56d7",
+      "cached": true
+    },
+    {
+      "artifact": "region-vi-western-visayas-negros-occidental",
+      "region_name": "REGION VI (WESTERN VISAYAS)",
+      "province_name": "Negros Occidental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=122.98652&latitude=10.31052&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:39+00:00",
+      "file": "data\\raw\\nasa\\region-vi-western-visayas-negros-occidental.json",
+      "file_sha256": "1d5ef99ab6540ae17fb5c44e18d6b4f57252d044e9963d8adc2c0c6f6224bf6e",
+      "cached": true
+    },
+    {
+      "artifact": "region-vii-central-visayas-bohol",
+      "region_name": "REGION VII (CENTRAL VISAYAS)",
+      "province_name": "Bohol",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.20441&latitude=9.85394&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:40+00:00",
+      "file": "data\\raw\\nasa\\region-vii-central-visayas-bohol.json",
+      "file_sha256": "2dc1a958e10b40263096c318df65fa2223fdd6d19fdda9b45b16560a4193c76e",
+      "cached": true
+    },
+    {
+      "artifact": "region-vii-central-visayas-cebu",
+      "region_name": "REGION VII (CENTRAL VISAYAS)",
+      "province_name": "Cebu",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.71730&latitude=10.31274&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:42+00:00",
+      "file": "data\\raw\\nasa\\region-vii-central-visayas-cebu.json",
+      "file_sha256": "bdcf388e4082cea20a4907c2808f989e0c06bb5da882e28f2af13b2a4820a7e6",
+      "cached": true
+    },
+    {
+      "artifact": "region-vii-central-visayas-negros-oriental",
+      "region_name": "REGION VII (CENTRAL VISAYAS)",
+      "province_name": "Negros Oriental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.03346&latitude=9.60695&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:43+00:00",
+      "file": "data\\raw\\nasa\\region-vii-central-visayas-negros-oriental.json",
+      "file_sha256": "f38f589f6fee96c29eb2d3f44613e789db1e7ba6f66c063559cdc36296225fd2",
+      "cached": true
+    },
+    {
+      "artifact": "region-vii-central-visayas-siquijor",
+      "region_name": "REGION VII (CENTRAL VISAYAS)",
+      "province_name": "Siquijor",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.58867&latitude=9.18521&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:44+00:00",
+      "file": "data\\raw\\nasa\\region-vii-central-visayas-siquijor.json",
+      "file_sha256": "12620d7a04cd70c935ab9ce533a7d1d39e04a194ac1ce7abf02824f0255c4447",
+      "cached": true
+    },
+    {
+      "artifact": "region-viii-eastern-visayas-biliran",
+      "region_name": "REGION VIII (EASTERN VISAYAS)",
+      "province_name": "Biliran",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.48392&latitude=11.58566&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:46+00:00",
+      "file": "data\\raw\\nasa\\region-viii-eastern-visayas-biliran.json",
+      "file_sha256": "72a592ab486f3af84c4f118146e86f7571ca0af6b2d263fed55759fda2d6dd8b",
+      "cached": true
+    },
+    {
+      "artifact": "region-viii-eastern-visayas-eastern-samar",
+      "region_name": "REGION VIII (EASTERN VISAYAS)",
+      "province_name": "Eastern Samar",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.36772&latitude=11.67751&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:47+00:00",
+      "file": "data\\raw\\nasa\\region-viii-eastern-visayas-eastern-samar.json",
+      "file_sha256": "aa63f734fe83d3bd9aad3c3fdd88a43c3f309593734d5e5cfccf43b4fa24f8ec",
+      "cached": true
+    },
+    {
+      "artifact": "region-viii-eastern-visayas-leyte",
+      "region_name": "REGION VIII (EASTERN VISAYAS)",
+      "province_name": "Leyte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.75561&latitude=10.97416&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:49+00:00",
+      "file": "data\\raw\\nasa\\region-viii-eastern-visayas-leyte.json",
+      "file_sha256": "52aaf098a42c24f6e0b1284c6783a889dcb34924b8a1a65cfd36c3965ea5ce67",
+      "cached": true
+    },
+    {
+      "artifact": "region-viii-eastern-visayas-northern-samar",
+      "region_name": "REGION VIII (EASTERN VISAYAS)",
+      "province_name": "Northern Samar",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.80954&latitude=12.40246&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:50+00:00",
+      "file": "data\\raw\\nasa\\region-viii-eastern-visayas-northern-samar.json",
+      "file_sha256": "d3a45ee3cd5a964fe7a4b2cfefcc7d9261e9dd6b71ecca619bb66242e4aee7cf",
+      "cached": true
+    },
+    {
+      "artifact": "region-viii-eastern-visayas-samar",
+      "region_name": "REGION VIII (EASTERN VISAYAS)",
+      "province_name": "Samar",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.95498&latitude=11.85053&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:52+00:00",
+      "file": "data\\raw\\nasa\\region-viii-eastern-visayas-samar.json",
+      "file_sha256": "40f3793251bb97014e537c91597151918a0012d6f99b727fe6f6dd8d5ff9f355",
+      "cached": true
+    },
+    {
+      "artifact": "region-viii-eastern-visayas-southern-leyte",
+      "region_name": "REGION VIII (EASTERN VISAYAS)",
+      "province_name": "Southern Leyte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.03015&latitude=10.32707&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:53+00:00",
+      "file": "data\\raw\\nasa\\region-viii-eastern-visayas-southern-leyte.json",
+      "file_sha256": "2561772d8895e211ea53faee9af00bdef25bf5304f41a8c8279ea386779b5591",
+      "cached": true
+    },
+    {
+      "artifact": "region-x-northern-mindanao-bukidnon",
+      "region_name": "REGION X (NORTHERN MINDANAO)",
+      "province_name": "Bukidnon",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.00694&latitude=8.01868&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:55+00:00",
+      "file": "data\\raw\\nasa\\region-x-northern-mindanao-bukidnon.json",
+      "file_sha256": "3bc73a8e132e354b48733a5f6f7677cbdfbc0e04d6d846574b1e3f09fdbc1335",
+      "cached": true
+    },
+    {
+      "artifact": "region-x-northern-mindanao-camiguin",
+      "region_name": "REGION X (NORTHERN MINDANAO)",
+      "province_name": "Camiguin",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.71768&latitude=9.17204&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:56+00:00",
+      "file": "data\\raw\\nasa\\region-x-northern-mindanao-camiguin.json",
+      "file_sha256": "cb1cea20fcb19eb08490101a01a2dcfd3876733a8d8a2ac8954b14f37427c40e",
+      "cached": true
+    },
+    {
+      "artifact": "region-x-northern-mindanao-lanao-del-norte",
+      "region_name": "REGION X (NORTHERN MINDANAO)",
+      "province_name": "Lanao del Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.03794&latitude=8.02671&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:57+00:00",
+      "file": "data\\raw\\nasa\\region-x-northern-mindanao-lanao-del-norte.json",
+      "file_sha256": "947c0445d92aa93436bf63eaa554c8c463ec6cf9de7171cd0e5c4cb925cc6d6c",
+      "cached": true
+    },
+    {
+      "artifact": "region-x-northern-mindanao-misamis-occidental",
+      "region_name": "REGION X (NORTHERN MINDANAO)",
+      "province_name": "Misamis Occidental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=123.69031&latitude=8.32391&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:47:59+00:00",
+      "file": "data\\raw\\nasa\\region-x-northern-mindanao-misamis-occidental.json",
+      "file_sha256": "419165acda51e37e1da69767a7a5b5d406d6f489ac076a2fbbf77a66a0a73493",
+      "cached": true
+    },
+    {
+      "artifact": "region-x-northern-mindanao-misamis-oriental",
+      "region_name": "REGION X (NORTHERN MINDANAO)",
+      "province_name": "Misamis Oriental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.79149&latitude=8.63255&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:00+00:00",
+      "file": "data\\raw\\nasa\\region-x-northern-mindanao-misamis-oriental.json",
+      "file_sha256": "6c0d70c3857ddde516908945e5da2710cf9004338fc82b78c6f9edef6f739d68",
+      "cached": true
+    },
+    {
+      "artifact": "region-xi-davao-region-davao-occidental",
+      "region_name": "REGION XI (DAVAO REGION)",
+      "province_name": "Davao Occidental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.54618&latitude=6.13056&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:02+00:00",
+      "file": "data\\raw\\nasa\\region-xi-davao-region-davao-occidental.json",
+      "file_sha256": "9b322b56eb2280885a5e0d5e84b1113526aef09d4b930d74a41b57932e5460c2",
+      "cached": true
+    },
+    {
+      "artifact": "region-xi-davao-region-davao-oriental",
+      "region_name": "REGION XI (DAVAO REGION)",
+      "province_name": "Davao Oriental",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=126.29823&latitude=7.25153&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:04+00:00",
+      "file": "data\\raw\\nasa\\region-xi-davao-region-davao-oriental.json",
+      "file_sha256": "608a74b78984b5e7ccf3d4b35a2ca4e98371851a6da7bfceb3d326d55523d29f",
+      "cached": true
+    },
+    {
+      "artifact": "region-xi-davao-region-davao-de-oro",
+      "region_name": "REGION XI (DAVAO REGION)",
+      "province_name": "Davao de Oro",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=126.02297&latitude=7.57331&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:05+00:00",
+      "file": "data\\raw\\nasa\\region-xi-davao-region-davao-de-oro.json",
+      "file_sha256": "b50bd153057dc937854578a74e2b95112689cda624390aa360ac21f16e496345",
+      "cached": true
+    },
+    {
+      "artifact": "region-xi-davao-region-davao-del-norte",
+      "region_name": "REGION XI (DAVAO REGION)",
+      "province_name": "Davao del Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.63341&latitude=7.63567&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:07+00:00",
+      "file": "data\\raw\\nasa\\region-xi-davao-region-davao-del-norte.json",
+      "file_sha256": "b043b66ab194f5baaffb4da3311453c11332e08778b40a3dd06ee98326d5fba7",
+      "cached": true
+    },
+    {
+      "artifact": "region-xi-davao-region-davao-del-sur",
+      "region_name": "REGION XI (DAVAO REGION)",
+      "province_name": "Davao del Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.34539&latitude=7.01619&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:09+00:00",
+      "file": "data\\raw\\nasa\\region-xi-davao-region-davao-del-sur.json",
+      "file_sha256": "13fc4057e5aa17d03b63f1313f08af944e122b97d1756316bbea9db9a6e62d96",
+      "cached": true
+    },
+    {
+      "artifact": "region-xii-soccsksargen-cotabato",
+      "region_name": "REGION XII (SOCCSKSARGEN)",
+      "province_name": "Cotabato",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.85050&latitude=7.20260&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:10+00:00",
+      "file": "data\\raw\\nasa\\region-xii-soccsksargen-cotabato.json",
+      "file_sha256": "633da571080fe3733cde59c7eb6b30cfdcf3f6b09c5c78cbf05fed75faba7f06",
+      "cached": true
+    },
+    {
+      "artifact": "region-xii-soccsksargen-sarangani",
+      "region_name": "REGION XII (SOCCSKSARGEN)",
+      "province_name": "Sarangani",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.34501&latitude=6.08260&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:12+00:00",
+      "file": "data\\raw\\nasa\\region-xii-soccsksargen-sarangani.json",
+      "file_sha256": "14123df9e746776e55fe1b2315a2199b0a369cb0726a48cfa27621bab308f693",
+      "cached": true
+    },
+    {
+      "artifact": "region-xii-soccsksargen-south-cotabato",
+      "region_name": "REGION XII (SOCCSKSARGEN)",
+      "province_name": "South Cotabato",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.85313&latitude=6.28466&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:14+00:00",
+      "file": "data\\raw\\nasa\\region-xii-soccsksargen-south-cotabato.json",
+      "file_sha256": "e82e5bc4d7205809deac1fdcc50f2161aa2ffa900e330cf00f54ca92cc08237a",
+      "cached": true
+    },
+    {
+      "artifact": "region-xii-soccsksargen-sultan-kudarat",
+      "region_name": "REGION XII (SOCCSKSARGEN)",
+      "province_name": "Sultan Kudarat",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=124.43123&latitude=6.53496&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:15+00:00",
+      "file": "data\\raw\\nasa\\region-xii-soccsksargen-sultan-kudarat.json",
+      "file_sha256": "aaf6b39d9f9b4e303155609007162497d74c3da42c268b65faafd077e22f8fa1",
+      "cached": true
+    },
+    {
+      "artifact": "region-xiii-caraga-agusan-del-norte",
+      "region_name": "REGION XIII (CARAGA)",
+      "province_name": "Agusan del Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.53551&latitude=9.03126&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:17+00:00",
+      "file": "data\\raw\\nasa\\region-xiii-caraga-agusan-del-norte.json",
+      "file_sha256": "6e3c3b0009149223acf7c791a6b2f9586fb8562ea6160f212eaf3448cd4407fc",
+      "cached": true
+    },
+    {
+      "artifact": "region-xiii-caraga-agusan-del-sur",
+      "region_name": "REGION XIII (CARAGA)",
+      "province_name": "Agusan del Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.72898&latitude=8.42167&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:18+00:00",
+      "file": "data\\raw\\nasa\\region-xiii-caraga-agusan-del-sur.json",
+      "file_sha256": "61e5e2488b9f69ead2c7abd24eaafab25dec6daad61cd2a805d50ed5fa1a5c50",
+      "cached": true
+    },
+    {
+      "artifact": "region-xiii-caraga-city-of-butuan",
+      "region_name": "REGION XIII (CARAGA)",
+      "province_name": "City of Butuan",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.54060&latitude=8.94750&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:20+00:00",
+      "file": "data\\raw\\nasa\\region-xiii-caraga-city-of-butuan.json",
+      "file_sha256": "ee3306ba9ce731d82b514cf60526ed53abb137380408cc47cab7a7ac22bf11c4",
+      "cached": true
+    },
+    {
+      "artifact": "region-xiii-caraga-dinagat-islands",
+      "region_name": "REGION XIII (CARAGA)",
+      "province_name": "Dinagat Islands",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.60541&latitude=10.16987&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:21+00:00",
+      "file": "data\\raw\\nasa\\region-xiii-caraga-dinagat-islands.json",
+      "file_sha256": "ccc022bec4c3a427c95eed66679b80a12d2da2cf6c4b24cb01786588b56973c0",
+      "cached": true
+    },
+    {
+      "artifact": "region-xiii-caraga-surigao-del-norte",
+      "region_name": "REGION XIII (CARAGA)",
+      "province_name": "Surigao del Norte",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=125.60129&latitude=9.57561&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:23+00:00",
+      "file": "data\\raw\\nasa\\region-xiii-caraga-surigao-del-norte.json",
+      "file_sha256": "794d5c2066d42e08abfb0d01bbd08f840ea0e2b3465bd6bc5b438e9368012069",
+      "cached": true
+    },
+    {
+      "artifact": "region-xiii-caraga-surigao-del-sur",
+      "region_name": "REGION XIII (CARAGA)",
+      "province_name": "Surigao del Sur",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=PRECTOTCORR%2CT2M%2CT2M_MAX%2CT2M_MIN%2CRH2M%2CALLSKY_SFC_SW_DWN&community=AG&longitude=126.11314&latitude=8.77547&start=2009&end=2026&format=JSON",
+      "retrieved_at_utc": "2026-11-09T19:48:24+00:00",
+      "file": "data\\raw\\nasa\\region-xiii-caraga-surigao-del-sur.json",
+      "file_sha256": "ecb8c4b4167498cb237532e61acf44b548df0e328b419c7f2deabf67c0694cad",
+      "cached": true
+    }
+  ]
+}

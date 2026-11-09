@@ -1,0 +1,13 @@
+{
+  "artifact": "farmgate_metadata",
+  "url": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2M/NFG/0032M4AFN07.px",
+  "method": "GET",
+  "request_body": null,
+  "request_body_sha256": null,
+  "retrieved_at_utc": "2026-11-09T19:45:40+00:00",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 5508,
+  "file": "data\\raw\\psa\\farmgate_fruits.metadata.json",
+  "file_sha256": "6beacd62fc7a5b282e5741295513d63b2fce280f7ffcbbfd98e683c3f50d9b87"
+}

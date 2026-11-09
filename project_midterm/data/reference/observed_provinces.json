@@ -1,0 +1,365 @@
+{
+  "count": 90,
+  "provinces": [
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Basilan"
+    ],
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Lanao del Sur"
+    ],
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Maguindanao"
+    ],
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Maguindanao del Norte"
+    ],
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Maguindanao del Sur"
+    ],
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Sulu"
+    ],
+    [
+      "BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO",
+      "Tawi-tawi"
+    ],
+    [
+      "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "Abra"
+    ],
+    [
+      "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "Apayao"
+    ],
+    [
+      "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "Benguet"
+    ],
+    [
+      "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "Ifugao"
+    ],
+    [
+      "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "Kalinga"
+    ],
+    [
+      "CORDILLERA ADMINISTRATIVE REGION (CAR)",
+      "Mountain Province"
+    ],
+    [
+      "MIMAROPA REGION",
+      "City of Puerto Princesa"
+    ],
+    [
+      "MIMAROPA REGION",
+      "Marinduque"
+    ],
+    [
+      "MIMAROPA REGION",
+      "Occidental Mindoro"
+    ],
+    [
+      "MIMAROPA REGION",
+      "Oriental Mindoro"
+    ],
+    [
+      "MIMAROPA REGION",
+      "Palawan"
+    ],
+    [
+      "MIMAROPA REGION",
+      "Romblon"
+    ],
+    [
+      "NEGROS ISLAND REGION (NIR)",
+      "City of Bacolod"
+    ],
+    [
+      "NEGROS ISLAND REGION (NIR)",
+      "Negros Occidental"
+    ],
+    [
+      "NEGROS ISLAND REGION (NIR)",
+      "Negros Oriental"
+    ],
+    [
+      "NEGROS ISLAND REGION (NIR)",
+      "Siquijor"
+    ],
+    [
+      "REGION I (ILOCOS REGION)",
+      "Ilocos Norte"
+    ],
+    [
+      "REGION I (ILOCOS REGION)",
+      "Ilocos Sur"
+    ],
+    [
+      "REGION I (ILOCOS REGION)",
+      "La Union"
+    ],
+    [
+      "REGION I (ILOCOS REGION)",
+      "Pangasinan"
+    ],
+    [
+      "REGION II (CAGAYAN VALLEY)",
+      "Batanes"
+    ],
+    [
+      "REGION II (CAGAYAN VALLEY)",
+      "Cagayan"
+    ],
+    [
+      "REGION II (CAGAYAN VALLEY)",
+      "Isabela"
+    ],
+    [
+      "REGION II (CAGAYAN VALLEY)",
+      "Nueva Vizcaya"
+    ],
+    [
+      "REGION II (CAGAYAN VALLEY)",
+      "Quirino"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Aurora"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Bataan"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Bulacan"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Nueva Ecija"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Pampanga"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Tarlac"
+    ],
+    [
+      "REGION III (CENTRAL LUZON)",
+      "Zambales"
+    ],
+    [
+      "REGION IV-A (CALABARZON)",
+      "Batangas"
+    ],
+    [
+      "REGION IV-A (CALABARZON)",
+      "Cavite"
+    ],
+    [
+      "REGION IV-A (CALABARZON)",
+      "Laguna"
+    ],
+    [
+      "REGION IV-A (CALABARZON)",
+      "Quezon"
+    ],
+    [
+      "REGION IV-A (CALABARZON)",
+      "Rizal"
+    ],
+    [
+      "REGION IX (ZAMBOANGA PENINSULA)",
+      "Sulu"
+    ],
+    [
+      "REGION IX (ZAMBOANGA PENINSULA)",
+      "Zamboanga Sibugay"
+    ],
+    [
+      "REGION IX (ZAMBOANGA PENINSULA)",
+      "Zamboanga del Norte"
+    ],
+    [
+      "REGION IX (ZAMBOANGA PENINSULA)",
+      "Zamboanga del Sur"
+    ],
+    [
+      "REGION V (BICOL REGION)",
+      "Albay"
+    ],
+    [
+      "REGION V (BICOL REGION)",
+      "Camarines Norte"
+    ],
+    [
+      "REGION V (BICOL REGION)",
+      "Camarines Sur"
+    ],
+    [
+      "REGION V (BICOL REGION)",
+      "Catanduanes"
+    ],
+    [
+      "REGION V (BICOL REGION)",
+      "Masbate"
+    ],
+    [
+      "REGION V (BICOL REGION)",
+      "Sorsogon"
+    ],
+    [
+      "REGION VI (WESTERN VISAYAS)",
+      "Aklan"
+    ],
+    [
+      "REGION VI (WESTERN VISAYAS)",
+      "Antique"
+    ],
+    [
+      "REGION VI (WESTERN VISAYAS)",
+      "Capiz"
+    ],
+    [
+      "REGION VI (WESTERN VISAYAS)",
+      "Guimaras"
+    ],
+    [
+      "REGION VI (WESTERN VISAYAS)",
+      "Iloilo"
+    ],
+    [
+      "REGION VI (WESTERN VISAYAS)",
+      "Negros Occidental"
+    ],
+    [
+      "REGION VII (CENTRAL VISAYAS)",
+      "Bohol"
+    ],
+    [
+      "REGION VII (CENTRAL VISAYAS)",
+      "Cebu"
+    ],
+    [
+      "REGION VII (CENTRAL VISAYAS)",
+      "Negros Oriental"
+    ],
+    [
+      "REGION VII (CENTRAL VISAYAS)",
+      "Siquijor"
+    ],
+    [
+      "REGION VIII (EASTERN VISAYAS)",
+      "Biliran"
+    ],
+    [
+      "REGION VIII (EASTERN VISAYAS)",
+      "Eastern Samar"
+    ],
+    [
+      "REGION VIII (EASTERN VISAYAS)",
+      "Leyte"
+    ],
+    [
+      "REGION VIII (EASTERN VISAYAS)",
+      "Northern Samar"
+    ],
+    [
+      "REGION VIII (EASTERN VISAYAS)",
+      "Samar"
+    ],
+    [
+      "REGION VIII (EASTERN VISAYAS)",
+      "Southern Leyte"
+    ],
+    [
+      "REGION X (NORTHERN MINDANAO)",
+      "Bukidnon"
+    ],
+    [
+      "REGION X (NORTHERN MINDANAO)",
+      "Camiguin"
+    ],
+    [
+      "REGION X (NORTHERN MINDANAO)",
+      "Lanao del Norte"
+    ],
+    [
+      "REGION X (NORTHERN MINDANAO)",
+      "Misamis Occidental"
+    ],
+    [
+      "REGION X (NORTHERN MINDANAO)",
+      "Misamis Oriental"
+    ],
+    [
+      "REGION XI (DAVAO REGION)",
+      "Davao Occidental"
+    ],
+    [
+      "REGION XI (DAVAO REGION)",
+      "Davao Oriental"
+    ],
+    [
+      "REGION XI (DAVAO REGION)",
+      "Davao de Oro"
+    ],
+    [
+      "REGION XI (DAVAO REGION)",
+      "Davao del Norte"
+    ],
+    [
+      "REGION XI (DAVAO REGION)",
+      "Davao del Sur"
+    ],
+    [
+      "REGION XII (SOCCSKSARGEN)",
+      "Cotabato"
+    ],
+    [
+      "REGION XII (SOCCSKSARGEN)",
+      "Sarangani"
+    ],
+    [
+      "REGION XII (SOCCSKSARGEN)",
+      "South Cotabato"
+    ],
+    [
+      "REGION XII (SOCCSKSARGEN)",
+      "Sultan Kudarat"
+    ],
+    [
+      "REGION XIII (CARAGA)",
+      "Agusan del Norte"
+    ],
+    [
+      "REGION XIII (CARAGA)",
+      "Agusan del Sur"
+    ],
+    [
+      "REGION XIII (CARAGA)",
+      "City of Butuan"
+    ],
+    [
+      "REGION XIII (CARAGA)",
+      "Dinagat Islands"
+    ],
+    [
+      "REGION XIII (CARAGA)",
+      "Surigao del Norte"
+    ],
+    [
+      "REGION XIII (CARAGA)",
+      "Surigao del Sur"
+    ]
+  ]
+}

@@ -1,0 +1,83 @@
+psgc_code,psgc_name,geographic_level,region_code,geoboundaries_name,latitude,longitude,centroid_match_method
+0102800000,Ilocos Norte,Prov,1,Ilocos Norte,18.204858,120.730039,exact
+0102900000,Ilocos Sur,Prov,1,Ilocos Sur,17.246815,120.547272,exact
+0103300000,La Union,Prov,1,La Union,16.580579,120.424485,exact
+0105500000,Pangasinan,Prov,1,Pangasinan,15.993133,120.319601,exact
+0200900000,Batanes,Prov,2,Batanes,20.759939,121.835855,exact
+0201500000,Cagayan,Prov,2,Cagayan,18.015393,121.771119,exact
+0203100000,Isabela,Prov,2,Isabela,16.987316,121.961225,exact
+0205000000,Nueva Vizcaya,Prov,2,Nueva Vizcaya,16.305487,121.171717,exact
+0205700000,Quirino,Prov,2,Quirino,16.294514,121.595474,exact
+0300800000,Bataan,Prov,3,Bataan,14.6604,120.454382,exact
+0301400000,Bulacan,Prov,3,Bulacan,14.978714,121.058711,exact
+0304900000,Nueva Ecija,Prov,3,Nueva Ecija,15.619776,121.021706,exact
+0305400000,Pampanga,Prov,3,Pampanga,15.058551,120.647247,exact
+0306900000,Tarlac,Prov,3,Tarlac,15.478335,120.47622,exact
+0307100000,Zambales,Prov,3,Zambales,15.2855,120.144627,exact
+0307700000,Aurora,Prov,3,Aurora,15.923368,121.700421,exact
+0401000000,Batangas,Prov,4,Batangas,13.903755,121.031237,exact
+0402100000,Cavite,Prov,4,Cavite,14.254563,120.869835,exact
+0403400000,Laguna,Prov,4,Laguna,14.241443,121.366563,exact
+0405600000,Quezon,Prov,4,Quezon,14.091617,121.956175,exact
+0405800000,Rizal,Prov,4,Rizal,14.623461,121.263212,exact
+0500500000,Albay,Prov,5,Albay,13.203574,123.574014,exact
+0501600000,Camarines Norte,Prov,5,Camarines Norte,14.139709,122.723498,exact
+0501700000,Camarines Sur,Prov,5,Camarines Sur,13.700581,123.257172,exact
+0502000000,Catanduanes,Prov,5,Catanduanes,13.781331,124.236022,exact
+0504100000,Masbate,Prov,5,Masbate,12.1803,123.597874,exact
+0506200000,Sorsogon,Prov,5,Sorsogon,12.855093,123.928449,exact
+0600400000,Aklan,Prov,6,Aklan,11.607476,122.248814,exact
+0600600000,Antique,Prov,6,Antique,11.080643,122.101717,exact
+0601900000,Capiz,Prov,6,Capiz,11.369823,122.632854,exact
+0603000000,Iloilo,Prov,6,Iloilo,10.999597,122.592541,exact
+0607900000,Guimaras,Prov,6,Guimaras,10.573385,122.612708,exact
+0701200000,Bohol,Prov,7,Bohol,9.853941,124.204412,exact
+0702200000,Cebu,Prov,7,Cebu,10.312739,123.7173,exact
+0802600000,Eastern Samar,Prov,8,Eastern Samar,11.677513,125.367725,exact
+0803700000,Leyte,Prov,8,Leyte,10.97416,124.755611,exact
+0804800000,Northern Samar,Prov,8,Northern Samar,12.402456,124.809539,exact
+0806000000,Samar,Prov,8,Samar,11.850531,124.954984,exact
+0806400000,Southern Leyte,Prov,8,Southern Leyte,10.327068,125.030151,exact
+0807800000,Biliran,Prov,8,Biliran,11.585656,124.48392,exact
+0907200000,Zamboanga del Norte,Prov,9,Zamboanga del Norte,8.049013,122.807119,exact
+0907300000,Zamboanga del Sur,Prov,9,Zamboanga del Sur,7.881468,123.322125,exact
+0908300000,Zamboanga Sibugay,Prov,9,Zamboanga Sibugay,7.719861,122.714804,exact
+1001300000,Bukidnon,Prov,10,Bukidnon,8.018679,125.006941,exact
+1001800000,Camiguin,Prov,10,Camiguin,9.172039,124.717677,exact
+1003500000,Lanao del Norte,Prov,10,Lanao del Norte,8.026713,124.037945,exact
+1004200000,Misamis Occidental,Prov,10,Misamis Occidental,8.323913,123.690311,exact
+1004300000,Misamis Oriental,Prov,10,Misamis Oriental,8.632547,124.791486,exact
+1102300000,Davao del Norte,Prov,11,Davao del Norte,7.635673,125.633406,exact
+1102400000,Davao del Sur,Prov,11,Davao del Sur,7.01619,125.345392,exact
+1102500000,Davao Oriental,Prov,11,Davao Oriental,7.25153,126.298226,exact
+1108200000,Davao de Oro,Prov,11,Compostela Valley,7.573312,126.022974,exact
+1108600000,Davao Occidental,Prov,11,Davao Occidental,6.130561,125.546179,exact
+1204700000,Cotabato,Prov,12,Cotabato,7.2026,124.850496,exact
+1206300000,South Cotabato,Prov,12,South Cotabato,6.284656,124.853132,exact
+1206500000,Sultan Kudarat,Prov,12,Sultan Kudarat,6.534961,124.431228,exact
+1208000000,Sarangani,Prov,12,Sarangani,6.082601,125.345011,exact
+1400100000,Abra,Prov,14,Abra,17.578346,120.803248,exact
+1401100000,Benguet,Prov,14,Benguet,16.542745,120.698977,exact
+1402700000,Ifugao,Prov,14,Ifugao,16.848573,121.207377,exact
+1403200000,Kalinga,Prov,14,Kalinga,17.430982,121.279524,exact
+1404400000,Mountain Province,Prov,14,Mountain Province,17.101317,121.129238,exact
+1408100000,Apayao,Prov,14,Apayao,18.105779,121.187571,exact
+1600200000,Agusan del Norte,Prov,16,Agusan del Norte,9.031261,125.535512,exact
+1600300000,Agusan del Sur,Prov,16,Agusan del Sur,8.421668,125.728975,exact
+1606700000,Surigao del Norte,Prov,16,Surigao del Norte,9.575608,125.601295,exact
+1606800000,Surigao del Sur,Prov,16,Surigao del Sur,8.775467,126.113138,exact
+1608500000,Dinagat Islands,Prov,16,Dinagat Islands,10.169869,125.605407,exact
+1704000000,Marinduque,Prov,17,Marinduque,13.389545,121.969063,exact
+1705100000,Occidental Mindoro,Prov,17,Occidental Mindoro,12.946545,120.920977,exact
+1705200000,Oriental Mindoro,Prov,17,Oriental Mindoro,12.967081,121.263217,exact
+1705300000,Palawan,Prov,17,Palawan,9.730793,118.558626,exact
+1705900000,Romblon,Prov,17,Romblon,12.407674,122.039521,exact
+1804500000,Negros Occidental,Prov,18,Negros Occidental,10.310519,122.986517,exact
+1804600000,Negros Oriental,Prov,18,Negros Oriental,9.606949,123.033456,exact
+1806100000,Siquijor,Prov,18,Siquijor,9.18521,123.58867,exact
+1900700000,Basilan,Prov,19,Basilan,6.566546,122.052286,exact
+1903600000,Lanao del Sur,Prov,19,Lanao del Sur,7.796663,124.336145,exact
+1906600000,Sulu,Prov,19,Sulu,5.976087,121.128825,exact
+1907000000,Tawi-Tawi,Prov,19,Tawi-Tawi,5.19542,120.056361,exact
+1908700000,Maguindanao del Norte,Prov,19,Maguindanao,7.02713,124.388737,exact
+1908800000,Maguindanao del Sur,Prov,19,Maguindanao,7.02713,124.388737,exact

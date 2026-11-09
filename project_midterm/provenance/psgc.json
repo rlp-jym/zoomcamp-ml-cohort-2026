@@ -1,0 +1,14 @@
+{
+  "artifact": "psgc",
+  "url": "https://statistics.bettergov.ph/api/classification/psgc/Q2_2024/provinces",
+  "method": "GET",
+  "request_body": null,
+  "request_body_sha256": null,
+  "retrieved_at_utc": "2026-11-09T19:49:04+00:00",
+  "status_code": null,
+  "content_type": null,
+  "bytes": null,
+  "file": "data\\raw\\psgc\\provinces.json",
+  "file_sha256": "079030c5491d0ff8416d20343524f7374f2977402eca02fbce3601c6834ede93",
+  "regions_file": "data\\raw\\psgc\\regions.json"
+}

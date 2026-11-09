@@ -1,0 +1,62 @@
+{
+  "artifact": "ppa",
+  "url": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2A/PPA/0022A5FPPA1.px",
+  "method": "POST",
+  "request_body": {
+    "query": [
+      {
+        "code": "Sector",
+        "selection": {
+          "filter": "all",
+          "values": [
+            "*"
+          ]
+        }
+      },
+      {
+        "code": "Geolocation",
+        "selection": {
+          "filter": "all",
+          "values": [
+            "*"
+          ]
+        }
+      },
+      {
+        "code": "Type of Valuation",
+        "selection": {
+          "filter": "all",
+          "values": [
+            "*"
+          ]
+        }
+      },
+      {
+        "code": "Year",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "csv"
+    }
+  },
+  "request_body_sha256": "7ba69cc40a7648009da2cbae6f38c03893126498bd5bb694bbdd5a4cfaacb3b8",
+  "retrieved_at_utc": "2026-11-09T19:45:42+00:00",
+  "status_code": 200,
+  "content_type": "text/csv; charset=Windows-1252",
+  "bytes": 500293,
+  "file": "data\\raw\\psa\\ppa_gdp_by_industry.csv",
+  "file_sha256": "dcd55a2fd818b53182dee3cf7bb53e55cc8059203c98453fca674c15f5225a4d"
+}

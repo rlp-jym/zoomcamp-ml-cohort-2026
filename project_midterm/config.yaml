@@ -1,0 +1,64 @@
+project:
+  name: pineapple-yield-forecast-ph
+  timezone: Asia/Manila
+
+http:
+  timeout_seconds: 90
+  retries: 5
+  backoff_seconds: 2.0
+  user_agent: "pineapple-yield-forecast/0.1 (educational research; PSA OpenSTAT API)"
+
+psa:
+  api_base: "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB"
+  year_start: 2010
+  year_end: 2026
+  tables:
+    production:
+      path: "2E/CS/0072E4EVCP2.px"
+      raw: "psa/production_fruit_crops.csv"
+      metadata: "psa/production_fruit_crops.metadata.json"
+    area:
+      path: "2E/CS/0102E4EAHM2.px"
+      raw: "psa/area_fruit_crops.csv"
+      metadata: "psa/area_fruit_crops.metadata.json"
+    farmgate:
+      path: "2M/NFG/0032M4AFN07.px"
+      raw: "psa/farmgate_fruits.csv"
+      metadata: "psa/farmgate_fruits.metadata.json"
+    ppa:
+      path: "2A/PPA/0022A5FPPA1.px"
+      raw: "psa/ppa_gdp_by_industry.csv"
+      metadata: "psa/ppa_gdp_by_industry.metadata.json"
+  production_crops:
+    - "Pineapple"
+  farmgate_commodities:
+    - "Pineapple Formosa"
+    - "Pineapple Hawaiian"
+    - "Pineapple native"
+
+nasa:
+  api_base: "https://power.larc.nasa.gov/api/temporal/monthly/point"
+  parameters:
+    - "PRECTOTCORR"
+    - "T2M"
+    - "T2M_MAX"
+    - "T2M_MIN"
+    - "RH2M"
+    - "ALLSKY_SFC_SW_DWN"
+  community: "AG"
+  start_year: 2009
+  end_year: 2026
+
+enso:
+  url: "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt"
+
+geo:
+  psgc_base: "https://statistics.bettergov.ph/api/classification/psgc/Q2_2024"
+  geoboundaries_adm2_api: "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM2/"
+
+paths:
+  raw: "data/raw"
+  normalized: "data/normalized"
+  reference: "data/reference"
+  provenance: "provenance"
+  docs: "docs"

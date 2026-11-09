@@ -1,0 +1,13 @@
+{
+  "artifact": "ppa_metadata",
+  "url": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2A/PPA/0022A5FPPA1.px",
+  "method": "GET",
+  "request_body": null,
+  "request_body_sha256": null,
+  "retrieved_at_utc": "2026-11-09T19:45:42+00:00",
+  "status_code": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 4364,
+  "file": "data\\raw\\psa\\ppa_gdp_by_industry.metadata.json",
+  "file_sha256": "807b5b0c1e1dcda8d6895f81f29c25d4cbe0a5addcaa7e147727474dd7c692d4"
+}

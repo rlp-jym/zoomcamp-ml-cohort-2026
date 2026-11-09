@@ -1,0 +1,13 @@
+{
+  "artifact": "oni",
+  "url": "https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt",
+  "method": "GET",
+  "request_body": null,
+  "request_body_sha256": null,
+  "retrieved_at_utc": "2026-11-09T19:45:50+00:00",
+  "status_code": null,
+  "content_type": null,
+  "bytes": null,
+  "file": "data\\raw\\noaa\\oni.ascii.txt",
+  "file_sha256": "118c563331335c8649cdc2677e6be7ae89d1259d901345fcddbc2857af280f7f"
+}

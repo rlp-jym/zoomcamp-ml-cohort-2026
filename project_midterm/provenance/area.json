@@ -1,0 +1,71 @@
+{
+  "artifact": "area",
+  "url": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/CS/0102E4EAHM2.px",
+  "method": "POST",
+  "request_body": {
+    "query": [
+      {
+        "code": "Crop",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "13"
+          ]
+        }
+      },
+      {
+        "code": "Geolocation",
+        "selection": {
+          "filter": "all",
+          "values": [
+            "*"
+          ]
+        }
+      },
+      {
+        "code": "Year",
+        "selection": {
+          "filter": "item",
+          "values": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16"
+          ]
+        }
+      },
+      {
+        "code": "Period",
+        "selection": {
+          "filter": "all",
+          "values": [
+            "*"
+          ]
+        }
+      }
+    ],
+    "response": {
+      "format": "csv"
+    }
+  },
+  "request_body_sha256": "56f6ed1843b96741eb49197f2cf2b5c2680fc1c9754f4c2485098655319ece08",
+  "retrieved_at_utc": "2026-11-09T19:45:38+00:00",
+  "status_code": 200,
+  "content_type": "text/csv; charset=Windows-1252",
+  "bytes": 62189,
+  "file": "data\\raw\\psa\\area_fruit_crops.csv",
+  "file_sha256": "a5dce81eb06291103478bd371847bc88dd7b54acfdc496a97714efd1094b48fd"
+}

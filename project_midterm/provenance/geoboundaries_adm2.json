@@ -1,0 +1,15 @@
+{
+  "artifact": "geoboundaries_adm2",
+  "url": "https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson",
+  "method": "GET",
+  "request_body": null,
+  "request_body_sha256": null,
+  "retrieved_at_utc": "2026-11-09T19:49:08+00:00",
+  "status_code": null,
+  "content_type": null,
+  "bytes": null,
+  "file": "data\\raw\\geoboundaries\\PHL_ADM2.geojson",
+  "file_sha256": "fa77b9f17db2e419acaae714a935f7812be4409e2983675d34020e8426a3e189",
+  "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+  "source": "National Mapping and Resource Information Authority (NAMRIA), Philippines Statistics Authority (PSA), OCHA Philippines"
+}

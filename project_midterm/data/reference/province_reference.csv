@@ -1,0 +1,91 @@
+region_name,province_name,psgc_code,psgc_name,psgc_match_method,geoboundaries_name,latitude,longitude,centroid_match_method
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Basilan,1900700000,Basilan,exact,Basilan,6.566546,122.052286,psgc
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Lanao del Sur,1903600000,Lanao del Sur,exact,Lanao del Sur,7.796663,124.336145,psgc
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Maguindanao,,,none,Maguindanao,7.02713,124.388737,geoboundaries:exact
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Maguindanao del Norte,1908700000,Maguindanao del Norte,exact,Maguindanao,7.02713,124.388737,psgc
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Maguindanao del Sur,1908800000,Maguindanao del Sur,exact,Maguindanao,7.02713,124.388737,psgc
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Sulu,1906600000,Sulu,exact,Sulu,5.976087,121.128825,psgc
+BANGSAMORO AUTONOMOUS REGION IN MUSLIM MINDANAO,Tawi-tawi,1907000000,Tawi-Tawi,exact,Tawi-Tawi,5.19542,120.056361,psgc
+CORDILLERA ADMINISTRATIVE REGION (CAR),Abra,1400100000,Abra,exact,Abra,17.578346,120.803248,psgc
+CORDILLERA ADMINISTRATIVE REGION (CAR),Apayao,1408100000,Apayao,exact,Apayao,18.105779,121.187571,psgc
+CORDILLERA ADMINISTRATIVE REGION (CAR),Benguet,1401100000,Benguet,exact,Benguet,16.542745,120.698977,psgc
+CORDILLERA ADMINISTRATIVE REGION (CAR),Ifugao,1402700000,Ifugao,exact,Ifugao,16.848573,121.207377,psgc
+CORDILLERA ADMINISTRATIVE REGION (CAR),Kalinga,1403200000,Kalinga,exact,Kalinga,17.430982,121.279524,psgc
+CORDILLERA ADMINISTRATIVE REGION (CAR),Mountain Province,1404400000,Mountain Province,exact,Mountain Province,17.101317,121.129238,psgc
+MIMAROPA REGION,City of Puerto Princesa,1731500000,City of Puerto Princesa ,exact,,9.7392,118.7353,manual
+MIMAROPA REGION,Marinduque,1704000000,Marinduque,exact,Marinduque,13.389545,121.969063,psgc
+MIMAROPA REGION,Occidental Mindoro,1705100000,Occidental Mindoro,exact,Occidental Mindoro,12.946545,120.920977,psgc
+MIMAROPA REGION,Oriental Mindoro,1705200000,Oriental Mindoro,exact,Oriental Mindoro,12.967081,121.263217,psgc
+MIMAROPA REGION,Palawan,1705300000,Palawan,exact,Palawan,9.730793,118.558626,psgc
+MIMAROPA REGION,Romblon,1705900000,Romblon,exact,Romblon,12.407674,122.039521,psgc
+NEGROS ISLAND REGION (NIR),City of Bacolod,1830200000,City of Bacolod ,exact,,10.6765,122.9509,manual
+NEGROS ISLAND REGION (NIR),Negros Occidental,1804500000,Negros Occidental,exact,Negros Occidental,10.310519,122.986517,psgc
+NEGROS ISLAND REGION (NIR),Negros Oriental,1804600000,Negros Oriental,exact,Negros Oriental,9.606949,123.033456,psgc
+NEGROS ISLAND REGION (NIR),Siquijor,1806100000,Siquijor,exact,Siquijor,9.18521,123.58867,psgc
+REGION I (ILOCOS REGION),Ilocos Norte,0102800000,Ilocos Norte,exact,Ilocos Norte,18.204858,120.730039,psgc
+REGION I (ILOCOS REGION),Ilocos Sur,0102900000,Ilocos Sur,exact,Ilocos Sur,17.246815,120.547272,psgc
+REGION I (ILOCOS REGION),La Union,0103300000,La Union,exact,La Union,16.580579,120.424485,psgc
+REGION I (ILOCOS REGION),Pangasinan,0105500000,Pangasinan,exact,Pangasinan,15.993133,120.319601,psgc
+REGION II (CAGAYAN VALLEY),Batanes,0200900000,Batanes,exact,Batanes,20.759939,121.835855,psgc
+REGION II (CAGAYAN VALLEY),Cagayan,0201500000,Cagayan,exact,Cagayan,18.015393,121.771119,psgc
+REGION II (CAGAYAN VALLEY),Isabela,0203100000,Isabela,exact,Isabela,16.987316,121.961225,psgc
+REGION II (CAGAYAN VALLEY),Nueva Vizcaya,0205000000,Nueva Vizcaya,exact,Nueva Vizcaya,16.305487,121.171717,psgc
+REGION II (CAGAYAN VALLEY),Quirino,0205700000,Quirino,exact,Quirino,16.294514,121.595474,psgc
+REGION III (CENTRAL LUZON),Aurora,0307700000,Aurora,exact,Aurora,15.923368,121.700421,psgc
+REGION III (CENTRAL LUZON),Bataan,0300800000,Bataan,exact,Bataan,14.6604,120.454382,psgc
+REGION III (CENTRAL LUZON),Bulacan,0301400000,Bulacan,exact,Bulacan,14.978714,121.058711,psgc
+REGION III (CENTRAL LUZON),Nueva Ecija,0304900000,Nueva Ecija,exact,Nueva Ecija,15.619776,121.021706,psgc
+REGION III (CENTRAL LUZON),Pampanga,0305400000,Pampanga,exact,Pampanga,15.058551,120.647247,psgc
+REGION III (CENTRAL LUZON),Tarlac,0306900000,Tarlac,exact,Tarlac,15.478335,120.47622,psgc
+REGION III (CENTRAL LUZON),Zambales,0307100000,Zambales,exact,Zambales,15.2855,120.144627,psgc
+REGION IV-A (CALABARZON),Batangas,0401000000,Batangas,exact,Batangas,13.903755,121.031237,psgc
+REGION IV-A (CALABARZON),Cavite,0402100000,Cavite,exact,Cavite,14.254563,120.869835,psgc
+REGION IV-A (CALABARZON),Laguna,0403400000,Laguna,exact,Laguna,14.241443,121.366563,psgc
+REGION IV-A (CALABARZON),Quezon,0405600000,Quezon,exact,Quezon,14.091617,121.956175,psgc
+REGION IV-A (CALABARZON),Rizal,0405800000,Rizal,exact,Rizal,14.623461,121.263212,psgc
+REGION IX (ZAMBOANGA PENINSULA),Sulu,1906600000,Sulu,exact,Sulu,5.976087,121.128825,psgc
+REGION IX (ZAMBOANGA PENINSULA),Zamboanga Sibugay,0908300000,Zamboanga Sibugay,exact,Zamboanga Sibugay,7.719861,122.714804,psgc
+REGION IX (ZAMBOANGA PENINSULA),Zamboanga del Norte,0907200000,Zamboanga del Norte,exact,Zamboanga del Norte,8.049013,122.807119,psgc
+REGION IX (ZAMBOANGA PENINSULA),Zamboanga del Sur,0907300000,Zamboanga del Sur,exact,Zamboanga del Sur,7.881468,123.322125,psgc
+REGION V (BICOL REGION),Albay,0500500000,Albay,exact,Albay,13.203574,123.574014,psgc
+REGION V (BICOL REGION),Camarines Norte,0501600000,Camarines Norte,exact,Camarines Norte,14.139709,122.723498,psgc
+REGION V (BICOL REGION),Camarines Sur,0501700000,Camarines Sur,exact,Camarines Sur,13.700581,123.257172,psgc
+REGION V (BICOL REGION),Catanduanes,0502000000,Catanduanes,exact,Catanduanes,13.781331,124.236022,psgc
+REGION V (BICOL REGION),Masbate,0504100000,Masbate,exact,Masbate,12.1803,123.597874,psgc
+REGION V (BICOL REGION),Sorsogon,0506200000,Sorsogon,exact,Sorsogon,12.855093,123.928449,psgc
+REGION VI (WESTERN VISAYAS),Aklan,0600400000,Aklan,exact,Aklan,11.607476,122.248814,psgc
+REGION VI (WESTERN VISAYAS),Antique,0600600000,Antique,exact,Antique,11.080643,122.101717,psgc
+REGION VI (WESTERN VISAYAS),Capiz,0601900000,Capiz,exact,Capiz,11.369823,122.632854,psgc
+REGION VI (WESTERN VISAYAS),Guimaras,0607900000,Guimaras,exact,Guimaras,10.573385,122.612708,psgc
+REGION VI (WESTERN VISAYAS),Iloilo,0603000000,Iloilo,exact,Iloilo,10.999597,122.592541,psgc
+REGION VI (WESTERN VISAYAS),Negros Occidental,1804500000,Negros Occidental,exact,Negros Occidental,10.310519,122.986517,psgc
+REGION VII (CENTRAL VISAYAS),Bohol,0701200000,Bohol,exact,Bohol,9.853941,124.204412,psgc
+REGION VII (CENTRAL VISAYAS),Cebu,0702200000,Cebu,exact,Cebu,10.312739,123.7173,psgc
+REGION VII (CENTRAL VISAYAS),Negros Oriental,1804600000,Negros Oriental,exact,Negros Oriental,9.606949,123.033456,psgc
+REGION VII (CENTRAL VISAYAS),Siquijor,1806100000,Siquijor,exact,Siquijor,9.18521,123.58867,psgc
+REGION VIII (EASTERN VISAYAS),Biliran,0807800000,Biliran,exact,Biliran,11.585656,124.48392,psgc
+REGION VIII (EASTERN VISAYAS),Eastern Samar,0802600000,Eastern Samar,exact,Eastern Samar,11.677513,125.367725,psgc
+REGION VIII (EASTERN VISAYAS),Leyte,0803700000,Leyte,exact,Leyte,10.97416,124.755611,psgc
+REGION VIII (EASTERN VISAYAS),Northern Samar,0804800000,Northern Samar,exact,Northern Samar,12.402456,124.809539,psgc
+REGION VIII (EASTERN VISAYAS),Samar,0806000000,Samar,exact,Samar,11.850531,124.954984,psgc
+REGION VIII (EASTERN VISAYAS),Southern Leyte,0806400000,Southern Leyte,exact,Southern Leyte,10.327068,125.030151,psgc
+REGION X (NORTHERN MINDANAO),Bukidnon,1001300000,Bukidnon,exact,Bukidnon,8.018679,125.006941,psgc
+REGION X (NORTHERN MINDANAO),Camiguin,1001800000,Camiguin,exact,Camiguin,9.172039,124.717677,psgc
+REGION X (NORTHERN MINDANAO),Lanao del Norte,1003500000,Lanao del Norte,exact,Lanao del Norte,8.026713,124.037945,psgc
+REGION X (NORTHERN MINDANAO),Misamis Occidental,1004200000,Misamis Occidental,exact,Misamis Occidental,8.323913,123.690311,psgc
+REGION X (NORTHERN MINDANAO),Misamis Oriental,1004300000,Misamis Oriental,exact,Misamis Oriental,8.632547,124.791486,psgc
+REGION XI (DAVAO REGION),Davao Occidental,1108600000,Davao Occidental,exact,Davao Occidental,6.130561,125.546179,psgc
+REGION XI (DAVAO REGION),Davao Oriental,1102500000,Davao Oriental,exact,Davao Oriental,7.25153,126.298226,psgc
+REGION XI (DAVAO REGION),Davao de Oro,1108200000,Davao de Oro,exact,Compostela Valley,7.573312,126.022974,psgc
+REGION XI (DAVAO REGION),Davao del Norte,1102300000,Davao del Norte,exact,Davao del Norte,7.635673,125.633406,psgc
+REGION XI (DAVAO REGION),Davao del Sur,1102400000,Davao del Sur,exact,Davao del Sur,7.01619,125.345392,psgc
+REGION XII (SOCCSKSARGEN),Cotabato,1204700000,Cotabato,exact,Cotabato,7.2026,124.850496,psgc
+REGION XII (SOCCSKSARGEN),Sarangani,1208000000,Sarangani,exact,Sarangani,6.082601,125.345011,psgc
+REGION XII (SOCCSKSARGEN),South Cotabato,1206300000,South Cotabato,exact,South Cotabato,6.284656,124.853132,psgc
+REGION XII (SOCCSKSARGEN),Sultan Kudarat,1206500000,Sultan Kudarat,exact,Sultan Kudarat,6.534961,124.431228,psgc
+REGION XIII (CARAGA),Agusan del Norte,1600200000,Agusan del Norte,exact,Agusan del Norte,9.031261,125.535512,psgc
+REGION XIII (CARAGA),Agusan del Sur,1600300000,Agusan del Sur,exact,Agusan del Sur,8.421668,125.728975,psgc
+REGION XIII (CARAGA),City of Butuan,1630400000,City of Butuan ,exact,,8.9475,125.5406,manual
+REGION XIII (CARAGA),Dinagat Islands,1608500000,Dinagat Islands,exact,Dinagat Islands,10.169869,125.605407,psgc
+REGION XIII (CARAGA),Surigao del Norte,1606700000,Surigao del Norte,exact,Surigao del Norte,9.575608,125.601295,psgc
+REGION XIII (CARAGA),Surigao del Sur,1606800000,Surigao del Sur,exact,Surigao del Sur,8.775467,126.113138,psgc
