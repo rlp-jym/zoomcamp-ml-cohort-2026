@@ -18,6 +18,7 @@ semester (a drop of at least 5%) about 12 months ahead, using lagged weather,
 ENSO, and yield momentum.
 
 Models compared: `LinearRegression`, `DecisionTree`, `RandomForest`, `XGBoost`.
+
 Primary evaluation: RMSE on `log1p(yield)`. For the warning decision, precision,
 recall, and F2 (recall-weighted) are reported. F2 is the selection metric because
 a missed drop is more costly than a false alarm.
@@ -32,8 +33,14 @@ was built using AI, as this is not the main focus of the course.
 |---|---|
 | PSA OpenSTAT | production, area, farmgate prices |
 | NASA POWER | monthly weather by province |
-| NOAA CPC | Oceanic Nino Index (ENSO) |
-| PSGC + geoBoundaries | province codes and centroids |
+| NOAA CPC | Oceanic Nino Index (ONI), the ENSO indicator used |
+| PSGC + geoBoundaries | province codes and centroids (reference for NASA weather) |
+
+PSGC and geoBoundaries are reference layers used to build the province-level
+weather features; they are not model inputs.
+
+ENSO = El Nino-Southern Oscillation, the climate pattern; ONI = Oceanic Nino
+Index, the specific sea-surface temperature anomaly used to measure it.
 
 Cleaned dataset: 28 provinces, 2010-2026, 658 province-semester rows.
 
@@ -50,13 +57,43 @@ py -m src.verify                  # offline integrity check
 
 ## Quality-of-life scripts
 
-| Script | What it does |
-|---|---|
-| `run_docker.bat` | Build and run the Docker image |
-| `run_server_api.bat` | Start the FastAPI service on port 9696 |
-| `run_notebook.bat` | Open JupyterLab (`run_notebook.bat exec` runs top-to-bottom) |
-| `run_training.bat` | Train and save `model/pineapple_yield_model.joblib` |
-| `run_verification.bat` | PASS/FAIL check against `samples/sample_request.json` |
+| Script | What it does | Approx. time |
+|---|---|---|
+| `run_docker.bat` | Build and run the Docker image | first build 2-3 min; cached build 10-30 s |
+| `run_server_api.bat` | Start the FastAPI service on port 9696 | a few seconds |
+| `run_notebook.bat` | Open JupyterLab (`run_notebook.bat exec` runs top-to-bottom) | open: seconds; exec: 1-2 min |
+| `run_training.bat` | Train and save `model/pineapple_yield_model.joblib` | ~10 s |
+| `run_verification.bat` | PASS/FAIL check against `samples/sample_request.json` | ~5 s |
+
+### Build-up from scratch
+
+```
+git clone <repo-url>
+        |
+        v
+cd ml-cohort-2026/pineapple_yield_prediction
+        |
+        v
+start Docker Desktop
+        |
+        v
+double-click run_docker.bat
+        |
+        v
+open http://localhost:9696/   (the bat also opens it)
+```
+
+`run_docker.bat` and `run_server_api.bat` are alternatives: Docker starts the
+service inside the container, while `run_server_api.bat` starts it locally with
+uv. Use one at a time, since both bind port 9696.
+
+Optional checks:
+
+```
+run_notebook.bat      -> notebook.ipynb (data prep, EDA, models, demos)
+run_training.bat      -> retrain and replace model/pineapple_yield_model.joblib
+run_verification.bat  -> PASS/FAIL check of sample_request.json
+```
 
 ## Notebook (`notebook.ipynb`)
 
@@ -65,14 +102,17 @@ early-warning and cost-of-late-intervention demos.
 
 Features (lag 2 = one year cycle):
 
-- `oni_anom_prev2`
-- `allsky_sfc_sw_dwn_prev2`
-- `prectotcorr_prev2`
-- `rh2m_prev2`
-- `t2m_prev2`
-- `t2m_max_prev2`
-- `t2m_min_prev2`
-- `yield_prev2`
+- `oni_anom_prev2` — ENSO anomaly two semesters ago; negative = La Nina, positive = El Nino
+- `allsky_sfc_sw_dwn_prev2` — all-sky solar irradiance two semesters ago, MJ/m2/day
+- `prectotcorr_prev2` — total rainfall in the semester two semesters ago, mm
+- `rh2m_prev2` — mean relative humidity two semesters ago, %
+- `t2m_prev2` — mean air temperature two semesters ago, C
+- `t2m_max_prev2` — mean daily maximum temperature two semesters ago, C
+- `t2m_min_prev2` — mean daily minimum temperature two semesters ago, C
+- `yield_prev2` — yield in the same semester last year, mt/ha
+
+Full definitions, units, and data quirks: [docs/data_dictionary.md](docs/data_dictionary.md).
+Pipeline details: [docs/pipeline.md](docs/pipeline.md).
 
 Data split:
 
@@ -80,28 +120,30 @@ Data split:
 - validate 2023-24 (80)
 - test >= 2025 (65)
 
-| Model | Val RMSE | Test RMSE |
-|---|---|---|
-| Seasonal persistence (`yield_prev2`, same semester last year) | 0.390 | 0.379 |
-| LinearRegression | 0.500 | - |
-| DecisionTree (depth 6) | 0.385 | 0.424 (3.51 mt/ha) |
-| RandomForest (depth 5) | 0.389 | - |
-| XGBoost (depth 4) | 0.351 | 0.399 (4.18 mt/ha) |
+| Model | Val RMSE | Val Precision | Val Recall | Val F2 | Test RMSE |
+|---|---|---|---|---|---|
+| Seasonal persistence (`yield_prev2`, same semester last year) | 0.390 | 0.00 | 0.00 | 0.00 | 0.379 |
+| LinearRegression | 0.500 | 0.31 | 0.53 | 0.47 | - |
+| DecisionTree (depth 6) | 0.385 | 0.58 | 0.47 | 0.49 | 0.424 (3.51 mt/ha) |
+| RandomForest (depth 5) | 0.389 | 0.77 | 0.33 | 0.38 | - |
+| XGBoost (depth 4) | 0.351 | 0.55 | 0.37 | 0.39 | 0.399 (4.18 mt/ha) |
 
-**Final model: DecisionTree.** XGBoost had the best RMSE, but DecisionTree had
-the best alert F2 on validation (0.49) and is the model used for the warning
-decision. On test, its alert F2 is 0.28 (precision 0.38, recall 0.26).
+Alert metrics are at the -5% threshold on validation. 
+
+**Final model: DecisionTree.**
+
+XGBoost had the best RMSE, but DecisionTree had the best alert
+F2 (0.49) and is the model used for the warning decision.
 
 `yield_prev2` dominates feature importance (~0.97 for the tree); lag-2 weather
 adds little.
 
 Early-warning demo (DecisionTree, -5% threshold, test):
 
-- 16 of 65 provinces flagged; 6 confirmed declines
 - precision 0.38, recall 0.26, F2 0.28
-- ~91,925 mt (~PHP 1.38 B) at risk at PHP 15/kg
-- Region 12: 1 test alert (South Cotabato); 0 in the 2027 S1 projection
-- Forward projection: 2027 S1 watchlist flags 6 of 22 provinces
+- 16 of 65 provinces flagged; 6 confirmed declines
+- ~91,925 mt (~PHP 1.38 B) at risk at assumed PHP 15/kg
+- 2027 S1: watchlist flags 6 of 22 provinces
 
 ## Train the model
 
@@ -124,8 +166,9 @@ python predict.py      # or double-click run_server_api.bat
 - Sample request: `samples/sample_request.json` -> `samples/sample_response.json`
 
 The browser form applies the selected weather/ENSO values to all provinces;
-previous yield and area remain province-specific. Double-click
-`run_verification.bat` for a PASS/FAIL check (no server needed).
+previous yield and area remain province-specific. 
+
+Double-click `run_verification.bat` for a PASS/FAIL check (no server needed).
 
 ## Docker
 
@@ -134,7 +177,10 @@ docker build -t pineapple-yield .
 docker run -it -p 9696:9696 pineapple-yield
 ```
 
-Or double-click `run_docker.bat`.
+Or double-click `run_docker.bat`. It prints the build time at the end. The first
+build takes a few minutes (base image + dependencies); later builds use the cache
+and finish in seconds. The image installs only the serving dependencies
+(`requirements-serve.txt`), not the notebook stack.
 
 ## Limitations
 
@@ -142,9 +188,16 @@ Or double-click `run_docker.bat`.
   the test set has only 65 rows.
 - The dataset is small after cleaning, and the model relies heavily on
   `yield_prev2`; weather features add little.
-- Seasonal persistence has better log RMSE (0.379 vs 0.424), though the tree is
-  slightly better in mt/ha (3.51 vs 3.58).
-- ~29% of test rows have yield < 5 mt/ha (PSA reporting quirks).
+- Seasonal persistence has better log RMSE (0.379 vs 0.424); the mt/ha difference
+  is negligible (3.51 vs 3.58) and is not the basis for selection. The tree was
+  chosen for alert F2/recall, not RMSE.
+- Yield is the prediction target, but province impact is measured by production
+  (`area x yield`), not yield alone.
+- 190 of 658 rows (28.9%) have yield < 5 mt/ha, and 47 are below 1 mt/ha. These
+  likely mix real low-yield areas with PSA reporting inconsistencies. They are
+  retained because removing them would leave 468 rows (below the 500-row
+  minimum) and bias the model toward high-yield provinces. The `area_ha >= 100`
+  filter removes tiny/partial reporting units, not low-yield provinces.
 - The 2027 S1 projection covers only the 22 provinces with 2026 S1 data.
 - No cloud deployment.
 
@@ -166,6 +219,7 @@ notebook.ipynb
 train.py
 predict.py
 requirements.txt
+requirements-serve.txt
 Dockerfile
 run_notebook.bat
 run_training.bat
