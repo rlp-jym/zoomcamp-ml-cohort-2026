@@ -39,7 +39,7 @@ ALL_STEPS = ["psa", "normalize", "geo", "nasa", "enso", "docs"]
 
 
 def load_config() -> dict:
-    with (ROOT / "config.yaml").open("r", encoding="utf-8") as handle:
+    with (ROOT / "src" / "config.yaml").open("r", encoding="utf-8") as handle:
         return yaml.safe_load(handle)
 
 

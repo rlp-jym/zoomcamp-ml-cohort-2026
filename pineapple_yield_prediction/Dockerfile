@@ -5,7 +5,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY predict.py pineapple_yield_model.joblib ./
+COPY predict.py ./
+COPY model/pineapple_yield_model.joblib ./model/
 
 EXPOSE 9696
 

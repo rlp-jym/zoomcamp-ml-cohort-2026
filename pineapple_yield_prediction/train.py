@@ -165,7 +165,9 @@ def main() -> None:
     model.fit(df[FINAL_FEATS], np.log1p(df["yield"]))
 
     artifact = {"model": model, "features": FINAL_FEATS}
-    out = BASE / "pineapple_yield_model.joblib"
+    model_dir = BASE / "model"
+    model_dir.mkdir(parents=True, exist_ok=True)
+    out = model_dir / "pineapple_yield_model.joblib"
     joblib.dump(artifact, out)
 
     print()
@@ -180,7 +182,7 @@ def main() -> None:
     print(f"{'XGBoost RMSE':<18} {rmse_mt:.2f}   mt/ha  (test)")
     print(f"{'baseline RMSE':<18} {base_log:.3f}  (log1p, yield_prev2)")
     print()
-    print(f"{'saved':<18} pineapple_yield_prediction/{out.name}")
+    print(f"{'saved':<18} pineapple_yield_prediction/model/{out.name}")
 
 
 if __name__ == "__main__":
