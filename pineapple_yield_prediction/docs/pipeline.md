@@ -13,7 +13,7 @@ The parent course environment already includes pandas and requests; add
 
 ## Commands
 
-Run from `project_midterm/`:
+Run from `pineapple_yield_prediction/`:
 
 ```bash
 py -m src.run all                 # full pipeline (uses cache where present)

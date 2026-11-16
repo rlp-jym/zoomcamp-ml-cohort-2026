@@ -1,6 +1,6 @@
 """Pipeline orchestrator.
 
-Usage (from project_midterm/):
+Usage (from pineapple_yield_prediction/):
 
     py -m src.run all
     py -m src.run --only psa,normalize
