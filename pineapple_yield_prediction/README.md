@@ -25,16 +25,30 @@ tables used for analysis are in `data/normalized/`.
 
 Cleaned dataset: 658 province-semester rows, 28 provinces, 2010-2026.
 
-## Data pipeline
+## Data pipeline (optional - refresh only)
+
+The normalized data is already committed, so reviewers can skip this. To refresh
+from PSA/NASA/NOAA or check integrity:
 
 ```bash
 pip install -r requirements.txt   # or: uv sync
-py -m src.run all
-py -m src.verify
+py -m src.run all       # network; rebuilds data/normalized
+py -m src.verify        # offline integrity check
 ```
 
-Or with uv: `run_notebook.bat` opens JupyterLab; `run_notebook.bat exec` runs the
+Click-run: `run_notebook.bat` opens JupyterLab; `run_notebook.bat exec` runs the
 notebook top-to-bottom.
+
+## Click-run scripts
+
+| Script | What it does |
+|---|---|
+| `run_notebook.bat` | Open JupyterLab (`run_notebook.bat exec` runs top-to-bottom) |
+| `run_training.bat` | Train and save `model/pineapple_yield_model.joblib` |
+| `run_prediction.bat` | Interactive prompt for the 8 features |
+| `run_verification.bat` | PASS/FAIL check against `samples/sample_request.json` |
+| `run_server_api.bat` | Start the FastAPI service on port 9696 |
+| `run_docker.bat` | Build and run the Docker image |
 
 ## Notebook (`notebook.ipynb`)
 
@@ -75,7 +89,7 @@ XGBoost vs baseline RMSE).
 ## Run the service
 
 ```bash
-python predict.py      # or double-click predict.bat / run_server_api.bat
+python predict.py      # or double-click run_server_api.bat
 ```
 
 - Health: http://localhost:9696/health
@@ -92,6 +106,8 @@ docker build -t pineapple-yield .
 docker run -it -p 9696:9696 pineapple-yield
 ```
 
+Or double-click `run_docker.bat`.
+
 ## Limitations
 
 - Alert precision is low; the model is close to a persistence forecast.
@@ -104,6 +120,6 @@ docker run -it -p 9696:9696 pineapple-yield
 
 ```
 README.md  notebook.ipynb  train.py  predict.py  requirements.txt  Dockerfile
-run_notebook.bat  run_training.bat  run_prediction.bat  run_verification.bat  run_server_api.bat
+run_notebook.bat  run_training.bat  run_prediction.bat  run_verification.bat  run_server_api.bat  run_docker.bat
 data/  docs/  provenance/  src/  model/  samples/  tools/
 ```
