@@ -4,7 +4,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 app = FastAPI(title="pineapple-yield-prediction")
 
@@ -14,6 +14,17 @@ _features = _artifact["features"]
 
 
 class Features(BaseModel):
+    model_config = ConfigDict(json_schema_extra={"example": {
+        "oni_anom_prev2": -0.13,
+        "allsky_sfc_sw_dwn_prev2": 17.055,
+        "prectotcorr_prev2": 1470.21,
+        "rh2m_prev2": 86.73,
+        "t2m_prev2": 26.445,
+        "t2m_max_prev2": 34.418,
+        "t2m_min_prev2": 21.763,
+        "yield_prev2": 3.94,
+    }})
+
     oni_anom_prev2: float
     allsky_sfc_sw_dwn_prev2: float
     prectotcorr_prev2: float

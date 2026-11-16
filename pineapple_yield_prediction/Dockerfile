@@ -5,8 +5,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py pineapple_yield_model.joblib ./
+COPY predict.py pineapple_yield_model.joblib ./
 
 EXPOSE 9696
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "9696"]
+CMD ["uvicorn", "predict:app", "--host", "0.0.0.0", "--port", "9696"]

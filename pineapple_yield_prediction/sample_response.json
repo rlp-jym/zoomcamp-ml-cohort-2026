@@ -1,0 +1,4 @@
+{
+  "yield_mt_ha": 4.05,
+  "note": "Predicted yield for the request in sample_request.json (2026 S1 features -> 2027 S1 forecast)."
+}
