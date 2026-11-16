@@ -227,8 +227,17 @@ and finish in seconds. The image installs only the serving dependencies
   and projection use train+val (593 rows), so predictions can differ slightly.
 - No cloud deployment.
 
-Next steps: more province-semester history, additional features (irrigation,
-fertilizer, disease), and a larger test period.
+## Next steps
+
+1. **Expand the dataset** — more province-semester history, especially for
+   low-yield provinces, and a larger test period.
+2. **Add features** — irrigation, fertilizer use, disease/pest pressure,
+   planting dates, and variety.
+3. **Improve validation** — time-series cross-validation and per-province
+   precision/recall.
+4. **Tune the alert threshold** — compare -5%/-10% by province and by cost of
+   missed vs false alarms.
+5. **Deploy to the cloud** (optional) — the Docker image is ready to host.
 
 ## Structure
 
