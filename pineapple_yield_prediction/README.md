@@ -1,4 +1,4 @@
-# Pineapple Yield Prediction
+# 🍍 Pineapple Yield Prediction
 
 Province-semester yield (`mt/ha`) early-warning model for the Philippines.
 
@@ -188,6 +188,12 @@ previous yield and area remain province-specific.
 
 Double-click `run_verification.bat` for a PASS/FAIL check (no server needed).
 
+### Demo
+
+![Scenario demo](docs/pineapple-yield-scenario.gif)
+
+[Full-quality video](docs/pineapple-yield-scenario.mp4)
+
 ## Docker
 
 ```bash
@@ -217,6 +223,8 @@ and finish in seconds. The image installs only the serving dependencies
   minimum) and bias the model toward high-yield provinces. The `area_ha >= 100`
   filter removes tiny/partial reporting units, not low-yield provinces.
 - The 2027 S1 projection covers only the 22 provinces with 2026 S1 data.
+- The web service retrains the DecisionTree on all 658 rows; the notebook test
+  and projection use train+val (593 rows), so predictions can differ slightly.
 - No cloud deployment.
 
 Next steps: more province-semester history, additional features (irrigation,
