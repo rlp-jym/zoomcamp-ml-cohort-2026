@@ -45,3 +45,9 @@ def predict(f: Features) -> dict:
     row = pd.DataFrame([{name: getattr(f, name) for name in _features}])
     pred = float(np.expm1(_model.predict(row)[0]))
     return {"yield_mt_ha": round(pred, 2)}
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="127.0.0.1", port=9696)
