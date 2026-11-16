@@ -1,34 +1,44 @@
-# Pineapple Yield Forecasting (Midterm Project)
+# Pineapple Yield Prediction
 
-Province-semester yield (`mt/ha`) early-warning model for the Philippines, with a
-SOCCSKSARGEN (Region 12) focus. Users: DA RFO XII and NEDA/DEPDev Region 12.
+Provincial semester yield (`mt/ha`) early-warning model for the Philippines, with a SOCCSKSARGEN (Region 12) focus.
+
+Users: regional planning offices, DA RFO 12 and DEPDev 12.
 
 ## Problem
 
-Pineapple yield is volatile and interventions tend to be reactive. This model
-predicts the next semester's yield about 12 months ahead, from lagged weather
-(NASA POWER), ENSO (NOAA ONI), and the previous yield, so a low-yield semester
-can be flagged before harvest. Metric: RMSE on `log1p(yield)` (reported as
-`mt/ha` too).
+Pineapple production in the Philippines is variable at province-semester level. The objective is to develop an early-warning system so that government intervention can be performed in a timely manner, ultimately benefiting farmers.
+
+## Solution
+
+A model that generates expectations about future production (mt/ha) to guide decision-making by regional planning offices. It flags a likely low-yield semester about 12 months ahead, using lagged weather data and momentum from previous yields. 
+
+Metric: RMSE on `log1p(yield)`.
+
+Models: `Regression`, `Decision Tree`, `Random Forest` and `XGBoost`
 
 ## Data
 
-Raw snapshots and provenance are in `data/raw/` and `provenance/`; normalized
-tables used for analysis are in `data/normalized/`.
+Raw snapshots and provenance are in `data/raw/` and `provenance/`.
+
+Normalized tables used for analysis are in `data/normalized/`.
 
 | Source | Content |
 |---|---|
-| PSA OpenSTAT | Fruit-crop production, area, farmgate prices |
-| NASA POWER | Monthly weather by province centroid |
+| PSA OpenSTAT | production, area, farmgate prices |
+| NASA POWER | Monthly weather by province |
 | NOAA CPC | Oceanic Nino Index (ENSO) |
 | PSGC + geoBoundaries | Province codes and centroids |
 
-Cleaned dataset: 658 province-semester rows, 28 provinces, 2010-2026.
+Cleaned dataset:
+- 28 provinces
+- years 2010-2026
+- 658 province-semester
 
 ## Data pipeline (optional - refresh only)
 
-The normalized data is already committed, so reviewers can skip this. To refresh
-from PSA/NASA/NOAA or check integrity:
+The normalized data is already committed, so reviewers can skip this.
+
+To refresh from PSA/NASA/NOAA or check integrity:
 
 ```bash
 pip install -r requirements.txt   # or: uv sync
@@ -36,8 +46,9 @@ py -m src.run all       # network; rebuilds data/normalized
 py -m src.verify        # offline integrity check
 ```
 
-Click-run: `run_notebook.bat` opens JupyterLab; `run_notebook.bat exec` runs the
-notebook top-to-bottom.
+Click-run:
+- `run_notebook.bat` opens JupyterLab; 
+- `run_notebook.bat exec` runs the notebook top-to-bottom.
 
 ## Click-run scripts
 
@@ -55,11 +66,20 @@ notebook top-to-bottom.
 Data prep, EDA, feature engineering, model selection/tuning, and the
 early-warning and cost-of-late-intervention demos.
 
-Features (lag 2 = one year): `oni_anom_prev2`, `allsky_sfc_sw_dwn_prev2`,
-`prectotcorr_prev2`, `rh2m_prev2`, `t2m_prev2`, `t2m_max_prev2`,
-`t2m_min_prev2`, `yield_prev2`. `area_ha` was dropped (no material effect).
+Features (lag 2 = one year):
+- `oni_anom_prev2` 
+- `allsky_sfc_sw_dwn_prev2`
+- `prectotcorr_prev2` 
+- `rh2m_prev2` 
+- `t2m_prev2` 
+- `t2m_max_prev2`
+- `t2m_min_prev2` 
+- `yield_prev2`
 
-Time split: train <= 2022 (513), validate 2023-24 (80), test >= 2025 (65).
+Time split:
+- train <= 2022 (513)
+- validate 2023-24 (80), 
+- test >= 2025 (65)
 
 | Model | Val RMSE | Test RMSE |
 |---|---|---|
@@ -69,14 +89,16 @@ Time split: train <= 2022 (513), validate 2023-24 (80), test >= 2025 (65).
 | RandomForest (depth 5) | 0.389 | - |
 | XGBoost (depth 4) | 0.351 | 0.399 |
 
-XGBoost is the final model (RMSE 4.18 mt/ha on test). `yield_prev2` dominates
-feature importance (~0.8); lag-2 weather adds residual signal.
+XGBoost is the final model (RMSE 4.18 mt/ha on test).
 
-Early-warning demo: 13 of 65 provinces flagged (>=10% predicted drop),
-~38,598 mt (~PHP 579 M) at risk at PHP 15/kg. Region 12 was stable (9 test
-rows, 0 alerts). Alert precision is low (2 of 13 confirmed declines).
+`yield_prev2` dominates feature importance (~0.8); with lag-2 weather adds residual signal.
 
-Forward projection: 2027 S1 watchlist has 3 of 22 provinces flagged.
+Early-warning demo:
+- Alert precision is low (2 of 13 confirmed declines)
+- 13 of 65 provinces flagged (>=10% predicted drop)
+- ~38,598 mt (~PHP 579 M) at risk at PHP 15/kg. 
+- Region 12 was stable (9 test - rows, 0 alerts)
+- Forward projection: 2027 S1 watchlist has 3 of 22 provinces flagged for intervention
 
 ## Train the model
 
@@ -111,7 +133,6 @@ Or double-click `run_docker.bat`.
 ## Limitations
 
 - Alert precision is low; the model is close to a persistence forecast.
-- Sultan Kudarat is over-predicted in the test period.
 - ~29% of test rows have yield < 5 mt/ha (PSA reporting quirks).
 - 2027 S1 projection covers only 22 provinces with 2026 S1 data.
 - No cloud deployment.
@@ -119,7 +140,24 @@ Or double-click `run_docker.bat`.
 ## Structure
 
 ```
-README.md  notebook.ipynb  train.py  predict.py  requirements.txt  Dockerfile
-run_notebook.bat  run_training.bat  run_prediction.bat  run_verification.bat  run_server_api.bat  run_docker.bat
-data/  docs/  provenance/  src/  model/  samples/  tools/
+data/ 
+docs/  
+provenance/  
+src/  
+model/  
+samples/  
+tools/
+README.md
+notebook.ipynb
+train.py  
+predict.py  
+requirements.txt
+Dockerfile
+run_notebook.bat  
+run_training.bat  
+run_prediction.bat  
+run_verification.bat  
+run_server_api.bat  
+run_docker.bat
+
 ```

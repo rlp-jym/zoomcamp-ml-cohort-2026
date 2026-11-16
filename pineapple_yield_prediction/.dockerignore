@@ -1,0 +1,12 @@
+data/
+docs/
+provenance/
+samples/
+tools/
+src/
+_notes/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+notebook.ipynb
+*.bat
