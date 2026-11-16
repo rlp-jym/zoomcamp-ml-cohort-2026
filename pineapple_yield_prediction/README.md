@@ -19,22 +19,31 @@ ENSO, and yield momentum.
 
 Models compared: `LinearRegression`, `DecisionTree`, `RandomForest`, `XGBoost`.
 
-Primary evaluation: RMSE on `log1p(yield)`. For the warning decision, precision,
+**Primary evaluation:** RMSE on `log1p(yield)`. For the **warning decision**, precision,
 recall, and F2 (recall-weighted) are reported. F2 is the selection metric because
 a missed drop is more costly than a false alarm.
+
+This is not an automatic action system. The model only produces a `watchlist` with the expected
+production/monetary risk; no intervention is triggered until live confirmation signals support the alert
+(e.g., harvest reports, rainfall, prices, field checks).
+That is why recall is prioritized over precision: a missed deterioration is costlier
+than a false alarm that live monitoring will filter out.
+
+The main benefit is **decision readiness:** a watchlist, budget, and intervention plan are already in place before the season turns, so action starts as soon as confirmation signals appear.
 
 ### Simulated use case (2027 S1)
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["1. Gathering<br/>PSA production/area<br/>NASA weather<br/>NOAA ONI"]
     B["2. Modeling<br/>train/validate/test<br/>lock model, -5% threshold"]
     C["3. Predicting<br/>score production/yield next semester<br/>watchlist: province, yield change/at risk"]
-    D["4. Monitoring<br/>watchlist + live confirmation signals<br/>harvests, rainfall, prices, field checks"]
+    P["4. Planning<br/>budget, strategy, contingency<br/>(the plan intervention executes)"]
+    D["5. Monitoring<br/>watchlist + live confirmation signals<br/>harvests, rainfall, prices, field checks"]
     E{"Deterioration<br/>confirmed?"}
-    F["5. Intervention<br/>targeted support"]
+    F["6. Intervention<br/>targeted support<br/>executes the plan"]
 
-    A --> B --> C --> D --> E
+    A --> B --> C -->|watchlist| P --> D --> E
     E -- Yes --> F
     E -- No --> D
     D -.->|new data / retrain| A
@@ -75,13 +84,15 @@ py -m src.verify                  # offline integrity check
 
 ## Quality-of-life scripts
 
-| Script | What it does | Approx. time |
-|---|---|---|
-| `run_docker.bat` | Build and run the Docker image | first build 2-3 min; cached build 10-30 s |
-| `run_server_api.bat` | Start the FastAPI service on port 9696 | a few seconds |
-| `run_notebook.bat` | Open JupyterLab (`run_notebook.bat exec` runs top-to-bottom) | open: seconds; exec: 1-2 min |
-| `run_training.bat` | Train and save `model/pineapple_yield_model.joblib` | ~10 s |
-| `run_verification.bat` | PASS/FAIL check against `samples/sample_request.json` | ~5 s |
+| Script | What it does | Environment | Approx. time |
+|---|---|---|---|
+| `run_docker.bat` | Build and run the Docker image | serve | first build 2-3 min; cached 10-30 s |
+| `run_server_api.bat` | Start the FastAPI service on port 9696 | serve | a few seconds |
+| `run_notebook.bat` | Open JupyterLab (`run_notebook.bat exec` runs top-to-bottom) | full | open: seconds; exec: 1-2 min |
+| `run_training.bat` | Train and save `model/pineapple_yield_model.joblib` | full | ~10 s |
+| `run_verification.bat` | PASS/FAIL check against `samples/sample_request.json` | serve | ~5 s |
+
+`full` = `requirements.txt` / `uv sync`; `serve` = `requirements-serve.txt`.
 
 ### Build-up from scratch
 
@@ -225,7 +236,6 @@ and finish in seconds. The image installs only the serving dependencies
 - The 2027 S1 projection covers only the 22 provinces with 2026 S1 data.
 - The web service retrains the DecisionTree on all 658 rows; the notebook test
   and projection use train+val (593 rows), so predictions can differ slightly.
-- No cloud deployment.
 
 ## Next steps
 
@@ -237,28 +247,27 @@ and finish in seconds. The image installs only the serving dependencies
    precision/recall.
 4. **Tune the alert threshold** — compare -5%/-10% by province and by cost of
    missed vs false alarms.
-5. **Deploy to the cloud** (optional) — the Docker image is ready to host.
 
 ## Structure
 
 ```
-data/
-docs/
-provenance/
-src/
-model/
-samples/
-tools/
-README.md
-notebook.ipynb
-train.py
-predict.py
-requirements.txt
-requirements-serve.txt
-Dockerfile
-run_notebook.bat
-run_training.bat
-run_verification.bat
-run_server_api.bat
-run_docker.bat
+data/                    raw + normalized data
+docs/                    data dictionary, pipeline, demo video
+provenance/              source snapshots and checksums
+src/                     data collection pipeline
+model/                   trained model + watchlist features
+samples/                 sample request/response JSON
+tools/                   verification helpers
+README.md                project documentation
+notebook.ipynb           data prep, EDA, models, demos
+train.py                 trains and saves the model
+predict.py               FastAPI service + browser UI
+requirements.txt         full environment (notebook + serving)
+requirements-serve.txt   serving-only dependencies
+Dockerfile               container image
+run_notebook.bat         open/execute the notebook
+run_training.bat         retrain and save the model
+run_verification.bat     PASS/FAIL check
+run_server_api.bat       run the service locally
+run_docker.bat           build + run the container
 ```

@@ -1,4 +1,4 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-uv run --project "%~dp0.." python predict.py
+uv run --isolated --no-project --with-requirements requirements-serve.txt python predict.py

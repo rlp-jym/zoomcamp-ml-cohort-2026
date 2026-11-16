@@ -6,7 +6,7 @@ COPY requirements-serve.txt .
 RUN pip install --no-cache-dir -r requirements-serve.txt
 
 COPY predict.py ./
-COPY model/pineapple_yield_model.joblib ./model/
+COPY model/ ./model/
 
 EXPOSE 9696
 
