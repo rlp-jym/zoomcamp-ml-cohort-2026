@@ -1,22 +1,20 @@
 # Pineapple Yield Forecasting (Midterm Project)
 
-Province-semester level early-warning model for pineapple yield (`mt/ha`) in the
-Philippines, with a SOCCSKSARGEN (Region 12) focus. Intended users: DA Regional
-Field Office XII and NEDA/DEPDev Region 12, for monitoring, early intervention,
-and investment targeting in agro-industrial value chains.
+Province-semester yield (`mt/ha`) early-warning model for the Philippines, with a
+SOCCSKSARGEN (Region 12) focus. Users: DA RFO XII and NEDA/DEPDev Region 12.
 
 ## Problem
 
-Pineapple production in SOCCSKSARGEN is volatile and interventions tend to be
-reactive. This project predicts the next semester's yield about 12 months ahead,
-from lagged weather (NASA POWER), ENSO (NOAA ONI), and the previous yield, so
-that a low-yield semester can be flagged before harvest. Reported metric is
-RMSE on `log1p(yield)`; the deployed model also reports RMSE in `mt/ha`.
+Pineapple yield is volatile and interventions tend to be reactive. This model
+predicts the next semester's yield about 12 months ahead, from lagged weather
+(NASA POWER), ENSO (NOAA ONI), and the previous yield, so a low-yield semester
+can be flagged before harvest. Metric: RMSE on `log1p(yield)` (reported as
+`mt/ha` too).
 
 ## Data
 
-Raw snapshots and provenance are committed under `data/raw/` and `provenance/`;
-normalized tables used for analysis are in `data/normalized/`.
+Raw snapshots and provenance are in `data/raw/` and `provenance/`; normalized
+tables used for analysis are in `data/normalized/`.
 
 | Source | Content |
 |---|---|
@@ -25,10 +23,9 @@ normalized tables used for analysis are in `data/normalized/`.
 | NOAA CPC | Oceanic Nino Index (ENSO) |
 | PSGC + geoBoundaries | Province codes and centroids |
 
-Dataset: 658 province-semester rows after cleaning (>= 500 required), 28
-provinces, 2010-2026.
+Cleaned dataset: 658 province-semester rows, 28 provinces, 2010-2026.
 
-## Run the data pipeline
+## Data pipeline
 
 ```bash
 pip install -r requirements.txt   # or: uv sync
@@ -36,23 +33,19 @@ py -m src.run all
 py -m src.verify
 ```
 
-Or, with uv, open the notebook:
+Or with uv: `run_notebook.bat` opens JupyterLab; `run_notebook.bat exec` runs the
+notebook top-to-bottom.
 
-```bash
-.\run.bat          # JupyterLab on the project venv
-.\run.bat exec     # run the notebook top-to-bottom
-```
+## Notebook (`notebook.ipynb`)
 
-## Notebook
+Data prep, EDA, feature engineering, model selection/tuning, and the
+early-warning and cost-of-late-intervention demos.
 
-`notebook.ipynb` contains data preparation, EDA, feature engineering, model
-selection and tuning, and the early-warning / cost-of-late-intervention demos.
+Features (lag 2 = one year): `oni_anom_prev2`, `allsky_sfc_sw_dwn_prev2`,
+`prectotcorr_prev2`, `rh2m_prev2`, `t2m_prev2`, `t2m_max_prev2`,
+`t2m_min_prev2`, `yield_prev2`. `area_ha` was dropped (no material effect).
 
-Feature set (lag 2 = one year):
-`oni_anom_prev2`, `allsky_sfc_sw_dwn_prev2`, `prectotcorr_prev2`,
-`rh2m_prev2`, `t2m_prev2`, `t2m_max_prev2`, `t2m_min_prev2`, `yield_prev2`.
-
-Time-based split: train <= 2022, validate 2023-24, test >= 2025.
+Time split: train <= 2022 (513), validate 2023-24 (80), test >= 2025 (65).
 
 | Model | Val RMSE | Test RMSE |
 |---|---|---|
@@ -62,40 +55,35 @@ Time-based split: train <= 2022, validate 2023-24, test >= 2025.
 | RandomForest (depth 5) | 0.389 | - |
 | XGBoost (depth 4) | 0.351 | 0.399 |
 
-XGBoost is the final model. `yield_prev2` dominates feature importance (~0.8);
-lag-2 weather adds residual signal; `area_ha` had no material effect and was
-dropped. Test RMSE = 4.18 mt/ha.
+XGBoost is the final model (RMSE 4.18 mt/ha on test). `yield_prev2` dominates
+feature importance (~0.8); lag-2 weather adds residual signal.
 
-Early-warning demo (test period): 13 of 65 provinces flagged (>=10% predicted
-drop), ~38,598 mt (~PHP 579 M) at risk at a blended farmgate price of PHP 15/kg.
-Region 12 was stable: 9 test rows, 0 alerts. Alert precision is low (2 of 13
-confirmed declines) - acceptable for an early-warning system, but noted.
+Early-warning demo: 13 of 65 provinces flagged (>=10% predicted drop),
+~38,598 mt (~PHP 579 M) at risk at PHP 15/kg. Region 12 was stable (9 test
+rows, 0 alerts). Alert precision is low (2 of 13 confirmed declines).
+
+Forward projection: 2027 S1 watchlist has 3 of 22 provinces flagged.
 
 ## Train the model
 
 ```bash
-python train.py        # writes pineapple_yield_model.joblib
+python train.py        # or double-click run_training.bat
 ```
+Writes `model/pineapple_yield_model.joblib`. Prints KPIs (rows, split sizes,
+XGBoost vs baseline RMSE).
 
 ## Run the service
 
 ```bash
-uv run uvicorn app:app --reload --port 9696
+python predict.py      # or double-click predict.bat / run_server_api.bat
 ```
 
-Health check:
+- Health: http://localhost:9696/health
+- Swagger UI: http://localhost:9696/docs (example prefilled; click Try it out)
+- Sample request: `samples/sample_request.json` -> expected `samples/sample_response.json`
 
-```bash
-curl http://localhost:9696/health
-```
-
-Prediction (8 lagged features -> mt/ha):
-
-```bash
-curl -X POST http://localhost:9696/predict \
-  -H "Content-Type: application/json" \
-  -d '{"oni_anom_prev2":-0.13,"allsky_sfc_sw_dwn_prev2":17.055,"prectotcorr_prev2":1470.21,"rh2m_prev2":86.73,"t2m_prev2":26.445,"t2m_max_prev2":34.418,"t2m_min_prev2":21.763,"yield_prev2":3.94}'
-```
+Double-click `run_prediction.bat` for an interactive prompt, or
+`run_verification.bat` for a PASS/FAIL check (no server needed).
 
 ## Docker
 
@@ -107,9 +95,15 @@ docker run -it -p 9696:9696 pineapple-yield
 ## Limitations
 
 - Alert precision is low; the model is close to a persistence forecast.
-- Sultan Kudarat is over-predicted in the test period (predicted ~8 vs actual ~4 mt/ha).
-- ~29% of test rows have yield < 5 mt/ha, which look like PSA reporting quirks
-  and inflate percentage-based metrics.
-- The forward projection (2027 S1) covers only the 22 provinces with 2026 S1
-  data and reuses 2026 S1 area as an exposure proxy.
+- Sultan Kudarat is over-predicted in the test period.
+- ~29% of test rows have yield < 5 mt/ha (PSA reporting quirks).
+- 2027 S1 projection covers only 22 provinces with 2026 S1 data.
 - No cloud deployment.
+
+## Structure
+
+```
+README.md  notebook.ipynb  train.py  predict.py  requirements.txt  Dockerfile
+run_notebook.bat  run_training.bat  run_prediction.bat  run_verification.bat  run_server_api.bat
+data/  docs/  provenance/  src/  model/  samples/  tools/
+```
