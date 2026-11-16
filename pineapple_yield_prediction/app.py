@@ -1,0 +1,36 @@
+"""FastAPI service for pineapple yield prediction."""
+
+import joblib
+import numpy as np
+import pandas as pd
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI(title="pineapple-yield-prediction")
+
+_artifact = joblib.load("pineapple_yield_model.joblib")
+_model = _artifact["model"]
+_features = _artifact["features"]
+
+
+class Features(BaseModel):
+    oni_anom_prev2: float
+    allsky_sfc_sw_dwn_prev2: float
+    prectotcorr_prev2: float
+    rh2m_prev2: float
+    t2m_prev2: float
+    t2m_max_prev2: float
+    t2m_min_prev2: float
+    yield_prev2: float
+
+
+@app.get("/health")
+def health() -> dict:
+    return {"status": "ok"}
+
+
+@app.post("/predict")
+def predict(f: Features) -> dict:
+    row = pd.DataFrame([{name: getattr(f, name) for name in _features}])
+    pred = float(np.expm1(_model.predict(row)[0]))
+    return {"yield_mt_ha": round(pred, 2)}
