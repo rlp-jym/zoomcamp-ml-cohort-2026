@@ -97,6 +97,9 @@ HOME_HTML = """<!doctype html>
   table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.8rem; }
   th, td { padding: 4px 6px; text-align: left; border-bottom: 1px solid #ddd; }
   th { background: #eee; }
+  .num { text-align: center; font-variant-numeric: tabular-nums; }
+  tbody tr:nth-child(even) { background: #f7f7f7; }
+  tbody tr:hover { background: #eef4ff; }
 </style>
 </head>
 <body>
@@ -107,7 +110,7 @@ Previous yield and area remain province-specific.</p>
 <button onclick="runScenario()">Update scenario</button>
 <div id="summary"></div>
 <h2>2027 S1 watchlist (mt at risk)</h2>
-<table id="wl"><thead><tr><th>Province</th><th>Prev</th><th>Pred</th><th>Change</th><th>At risk (mt)</th><th>PHP at risk</th></tr></thead><tbody></tbody></table>
+<table id="wl"><thead><tr><th>Province</th><th class="num">Prev</th><th class="num">Pred</th><th class="num">Change</th><th class="num">At risk (mt)</th><th class="num">PHP at risk</th></tr></thead><tbody></tbody></table>
 <script>
 const fields = """ + str([f[0] for f in SCENARIO_FIELDS]) + """;
 let rowsData = [];
@@ -117,10 +120,18 @@ async function loadWatchlist() {
   renderTable();
   summarize("Baseline (2027 S1 projection)");
 }
+function fmt(n, d) {
+  return Number(n).toLocaleString(undefined, {minimumFractionDigits: d, maximumFractionDigits: d});
+}
 function renderTable() {
   const tbody = document.querySelector("#wl tbody");
   tbody.innerHTML = rowsData.map(x =>
-    "<tr><td>" + x.province + "</td><td>" + x.yield_prev2 + "</td><td>" + x.yield_pred + "</td><td>" + x.change_pct + "%</td><td>" + x.mt_at_risk + "</td><td>" + Number(x.php_at_risk).toLocaleString() + "</td></tr>"
+    "<tr><td>" + x.province + "</td>" +
+    '<td class="num">' + fmt(x.yield_prev2, 2) + "</td>" +
+    '<td class="num">' + fmt(x.yield_pred, 2) + "</td>" +
+    '<td class="num">' + fmt(x.change_pct, 1) + "%</td>" +
+    '<td class="num">' + fmt(x.mt_at_risk, 0) + "</td>" +
+    '<td class="num">' + fmt(x.php_at_risk, 0) + "</td></tr>"
   ).join("");
 }
 function summarize(label) {
@@ -128,8 +139,8 @@ function summarize(label) {
   const php = rowsData.reduce((a, x) => a + x.php_at_risk, 0);
   document.getElementById("summary").innerHTML =
     "<b>" + label + "</b><br>provinces at risk: " + rowsData.length +
-    "<br>total mt at risk: " + mt.toFixed(0) +
-    "<br>total PHP at risk: " + php.toLocaleString();
+    "<br>total mt at risk: " + fmt(mt, 0) +
+    "<br>total PHP at risk: " + fmt(php, 0);
 }
 async function runScenario() {
   const payload = {};

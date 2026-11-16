@@ -23,6 +23,24 @@ Primary evaluation: RMSE on `log1p(yield)`. For the warning decision, precision,
 recall, and F2 (recall-weighted) are reported. F2 is the selection metric because
 a missed drop is more costly than a false alarm.
 
+### Simulated use case (2027 S1)
+
+```mermaid
+flowchart LR
+    A["1. Gathering<br/>PSA production/area<br/>NASA weather<br/>NOAA ONI"]
+    B["2. Modeling<br/>train/validate/test<br/>lock model, -5% threshold"]
+    C["3. Predicting<br/>score production/yield next semester<br/>watchlist: province, yield change/at risk"]
+    D["4. Monitoring<br/>watchlist + live confirmation signals<br/>harvests, rainfall, prices, field checks"]
+    E{"Deterioration<br/>confirmed?"}
+    F["5. Intervention<br/>targeted support"]
+
+    A --> B --> C --> D --> E
+    E -- Yes --> F
+    E -- No --> D
+    D -.->|new data / retrain| A
+    F -.->|outcomes| A
+```
+
 ## Data
 
 Raw snapshots and provenance are in `data/raw/` and `provenance/`; normalized
