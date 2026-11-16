@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import xgboost as xgb
 from sklearn.impute import SimpleImputer
+from sklearn.metrics import root_mean_squared_error
 from sklearn.pipeline import Pipeline
 
 BASE = Path(__file__).resolve().parent
@@ -131,9 +132,29 @@ def build_features() -> pd.DataFrame:
 
 def main() -> None:
     df = build_features()
-    X = df[FINAL_FEATS]
-    y = df["yield"]
 
+    train = df[df["year"] <= 2022]
+    val = df[df["year"].isin([2023, 2024])]
+    test = df[df["year"] >= 2025]
+
+    # honest holdout metric on a throwaway model
+    holdout = Pipeline([
+        ("impute", SimpleImputer(strategy="constant", fill_value=0)),
+        ("xgb", xgb.XGBRegressor(
+            n_estimators=110, max_depth=4, min_child_weight=50,
+            learning_rate=0.05, random_state=9,
+        )),
+    ])
+    holdout.fit(
+        pd.concat([train[FINAL_FEATS], val[FINAL_FEATS]]),
+        np.log1p(pd.concat([train["yield"], val["yield"]])),
+    )
+    pred_log = holdout.predict(test[FINAL_FEATS])
+    rmse_log = root_mean_squared_error(np.log1p(test["yield"]), pred_log)
+    rmse_mt = root_mean_squared_error(test["yield"], np.expm1(pred_log))
+    base_log = root_mean_squared_error(np.log1p(test["yield"]), np.log1p(test["yield_prev2"]))
+
+    # final model uses every row
     model = Pipeline([
         ("impute", SimpleImputer(strategy="constant", fill_value=0)),
         ("xgb", xgb.XGBRegressor(
@@ -141,12 +162,24 @@ def main() -> None:
             learning_rate=0.05, random_state=9,
         )),
     ])
-    model.fit(X, np.log1p(y))
+    model.fit(df[FINAL_FEATS], np.log1p(df["yield"]))
 
     artifact = {"model": model, "features": FINAL_FEATS}
     out = BASE / "pineapple_yield_model.joblib"
     joblib.dump(artifact, out)
-    print(f"trained on {len(df)} rows -> {out}")
+
+    print()
+    print("Pineapple yield model")
+    print("=" * 24)
+    print(f"{'rows':<18} {len(df)}")
+    print(f"{'features':<18} {len(FINAL_FEATS)}")
+    print(f"{'train / val / test':<18} {len(train)} / {len(val)} / {len(test)}")
+    print()
+    print(f"{'holdout RMSE':<18} {rmse_log:.3f}  (log1p)")
+    print(f"{'holdout RMSE':<18} {rmse_mt:.2f}   mt/ha")
+    print(f"{'baseline RMSE':<18} {base_log:.3f}  (log1p, yield_prev2)")
+    print()
+    print(f"{'saved':<18} pineapple_yield_prediction/{out.name}")
 
 
 if __name__ == "__main__":
