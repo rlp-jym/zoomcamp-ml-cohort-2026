@@ -1,12 +1,12 @@
 # Pineapple Yield Prediction
 
-Provincial semester yield (`mt/ha`) early-warning model for the Philippines, with a SOCCSKSARGEN (Region 12) focus.
+Provincial semester yield (`mt/ha`) early-warning model for the Philippines.
 
-Users: regional planning offices, DA RFO 12 and DEPDev 12.
+Users: regional planning offices
 
 ## Problem
 
-Pineapple production in the Philippines is variable at province-semester level. The objective is to develop an early-warning system so that government intervention can be performed in a timely manner, ultimately benefiting farmers.
+Pineapple production in the Philippines varies at the province-semester level. The objective is to develop an early-warning system so that government intervention can be performed in a timely manner, ultimately benefiting farmers.
 
 ## Solution
 
