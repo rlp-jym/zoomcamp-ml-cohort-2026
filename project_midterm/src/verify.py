@@ -28,12 +28,12 @@ def check(name: str, condition: bool, detail: str = "") -> None:
 
 
 def main() -> int:
-    production = pd.read_csv(NORM / "production_long.csv")
-    area = pd.read_csv(NORM / "area_long.csv")
-    farmgate = pd.read_csv(NORM / "farmgate_long.csv")
-    weather = pd.read_csv(NORM / "weather_long.csv")
-    enso = pd.read_csv(NORM / "enso_long.csv")
-    ppa = pd.read_csv(NORM / "ppa_long.csv")
+    production = pd.read_csv(NORM / "psa_production_long.csv")
+    area = pd.read_csv(NORM / "psa_area_long.csv")
+    farmgate = pd.read_csv(NORM / "psa_farmgate_long.csv")
+    weather = pd.read_csv(NORM / "nasa_weather_long.csv")
+    enso = pd.read_csv(NORM / "noaa_enso_long.csv")
+    ppa = pd.read_csv(NORM / "psa_ppa_long.csv")
     reference = pd.read_csv(REF / "province_reference.csv")
 
     # --- Baseline: South Cotabato 2023 -----------------------------------

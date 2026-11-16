@@ -8,7 +8,7 @@
 
 ## Normalized files
 
-### production_long.csv
+### psa_production_long.csv
 Pineapple volume of production.
 
 | Column | Meaning |
@@ -27,18 +27,18 @@ Pineapple volume of production.
 | `value_raw` | original source string (`..`, `/s`, number) |
 | `value` | metric tons; null for `..` and other non-numeric markers |
 
-### area_long.csv
+### psa_area_long.csv
 Same schema as production; `value` is hectares. Quarterly cells are mostly
 null for pineapple; semester values are populated.
 
-### farmgate_long.csv
+### psa_farmgate_long.csv
 Same schema plus `commodity`; `value` is pesos per kilogram.
 
-### ppa_long.csv
+### psa_ppa_long.csv
 Same schema plus `sector` and `type_of_valuation`; `value` is thousand pesos.
 No region/province carry-forward: PPA geographies use a different label shape.
 
-### weather_long.csv
+### nasa_weather_long.csv
 
 | Column | Meaning |
 |---|---|
@@ -48,11 +48,49 @@ No region/province carry-forward: PPA geographies use a different label shape.
 | `unit` | source unit |
 | `value` | null when NASA returns -999.0 |
 
-Parameters: PRECTOTCORR (mm/day), T2M / T2M_MAX / T2M_MIN (deg C),
-RH2M (%), ALLSKY_SFC_SW_DWN (MJ/m2/day).
+Parameter descriptions:
 
-### enso_long.csv
-`season` (DJF, JFM, ...), `year`, `total`, `anomaly` from NOAA ONI.
+| Parameter | Unit | Description |
+|---|---|---|
+| `PRECTOTCORR` | mm/day | Bias-corrected precipitation rate. Monthly total = value x days in month; semester total = sum of monthly totals. |
+| `T2M` | deg C | Mean air temperature at 2 m. |
+| `T2M_MAX` | deg C | Mean daily maximum temperature at 2 m. |
+| `T2M_MIN` | deg C | Mean daily minimum temperature at 2 m. |
+| `RH2M` | % | Relative humidity at 2 m. |
+| `ALLSKY_SFC_SW_DWN` | MJ/m2/day | All-sky surface shortwave downward irradiance (solar energy). |
+
+Notes:
+
+- Values are monthly means for the NASA POWER grid cell nearest the province centroid.
+- `PRECTOTCORR` is a rate: multiply by days in month before summing.
+- Temperature, humidity and solar are averaged over the semester.
+- `-999.0` is the missing-value fill and is stored as null.
+- The `YYYY13` annual row is dropped to avoid double counting.
+
+### noaa_enso_long.csv
+
+| Column | Meaning |
+|---|---|
+| `season` | 3-month window: `DJF`, `JFM`, `FMA`, ..., `NDJ` |
+| `year` | year of the middle month of the window |
+| `total` | absolute 3-month mean sea-surface temperature, deg C |
+| `anomaly` | departure from the climatological normal, deg C |
+
+Definitions:
+
+- ONI: 3-month running mean of SST anomalies in the Nino 3.4 region
+  (5N-5S, 120W-170W), ERSSTv5.
+- Base period: centered 30-year climatology updated every five years;
+  current base 1991-2020.
+- El Nino: `anomaly >= +0.5 deg C` for five consecutive overlapping seasons.
+- La Nina: `anomaly <= -0.5 deg C` for five consecutive overlapping seasons.
+- Neutral: between -0.5 and +0.5 deg C.
+- Magnitude: +/-0.5 weak, +/-1.0 moderate, +/-1.5 strong, +/-2.0 very strong.
+- Seasons overlap: each calendar month appears in three consecutive windows.
+  Do not sum adjacent seasons.
+- Non-overlapping semester mapping: S1 = mean(`JFM`, `AMJ`);
+  S2 = mean(`JAS`, `OND`).
+- Use `anomaly` as the feature.
 
 ## Reference files
 

@@ -33,10 +33,10 @@ py -m src.verify                  # acceptance checks against the baseline
 | Stage | Output |
 |---|---|
 | `psa` | `data/raw/psa/*.csv` + `*.metadata.json` + `provenance/*.json` |
-| `normalize` | `data/normalized/{production,area,farmgate,ppa}_long.csv` |
+| `normalize` | `data/normalized/psa_{production,area,farmgate,ppa}_long.csv` |
 | `geo` | `data/reference/psgc_provinces.csv`, `geoboundaries_provinces.csv`, `psgc_centroids.csv`, `province_reference.csv` |
-| `nasa` | `data/raw/nasa/*.json`, `data/normalized/weather_long.csv` |
-| `enso` | `data/raw/noaa/oni.ascii.txt`, `data/normalized/enso_long.csv` |
+| `nasa` | `data/raw/nasa/*.json`, `data/normalized/nasa_weather_long.csv` |
+| `enso` | `data/raw/noaa/oni.ascii.txt`, `data/normalized/noaa_enso_long.csv` |
 | `docs` | `docs/sources.md`, `docs/data_dictionary.md`, `docs/ingest_report.txt` |
 
 ## Design rules

@@ -143,25 +143,25 @@ def step_normalize(cfg: dict) -> list[tuple[str, str]]:
 
     production = _normalize_table(
         raw_dir / Path(tables["production"]["raw"]).name,
-        norm_dir / "production_long.csv",
+        norm_dir / "psa_production_long.csv",
         "production",
         hierarchy=True,
     )
     _normalize_table(
         raw_dir / Path(tables["area"]["raw"]).name,
-        norm_dir / "area_long.csv",
+        norm_dir / "psa_area_long.csv",
         "area",
         hierarchy=True,
     )
     _normalize_table(
         raw_dir / Path(tables["farmgate"]["raw"]).name,
-        norm_dir / "farmgate_long.csv",
+        norm_dir / "psa_farmgate_long.csv",
         "farmgate",
         hierarchy=True,
     )
     _normalize_table(
         raw_dir / Path(tables["ppa"]["raw"]).name,
-        norm_dir / "ppa_long.csv",
+        norm_dir / "psa_ppa_long.csv",
         "ppa",
         hierarchy=False,
         prefix_dimension="Type of Valuation",
@@ -383,8 +383,8 @@ def step_nasa(cfg: dict, refresh: bool, offline: bool) -> None:
             )
 
     weather = pd.DataFrame(rows)
-    weather.to_csv(norm_dir / "weather_long.csv", index=False, encoding="utf-8")
-    print(f"[nasa] weather_long.csv -> {len(weather):,} rows")
+    weather.to_csv(norm_dir / "nasa_weather_long.csv", index=False, encoding="utf-8")
+    print(f"[nasa] nasa_weather_long.csv -> {len(weather):,} rows")
 
 
 def step_enso(cfg: dict, refresh: bool, offline: bool) -> None:
@@ -410,8 +410,8 @@ def step_enso(cfg: dict, refresh: bool, offline: bool) -> None:
 
     rows = enso_mod.parse(raw_path.read_text(encoding="utf-8"))
     frame = pd.DataFrame(rows)
-    frame.to_csv(norm_dir / "enso_long.csv", index=False, encoding="utf-8")
-    print(f"[enso] enso_long.csv -> {len(frame):,} rows")
+    frame.to_csv(norm_dir / "noaa_enso_long.csv", index=False, encoding="utf-8")
+    print(f"[enso] noaa_enso_long.csv -> {len(frame):,} rows")
 
 
 def _file_facts(path: Path) -> dict:
@@ -450,15 +450,35 @@ Retrieved by `src/run.py`. All raw files are byte-exact snapshots.
 ## NASA POWER
 
 - Endpoint: `{cfg['nasa']['api_base']}`
-- Parameters: {", ".join(cfg['nasa']['parameters'])}
 - Community: `{cfg['nasa']['community']}`
-- No API key required. `PRECTOTCORR` is mm/day. Fill value `-999.0` is null.
+- No API key required.
+- Monthly values for the grid cell nearest each province centroid.
+
+| Parameter | Unit | Description |
+|---|---|---|
+| `PRECTOTCORR` | mm/day | Bias-corrected precipitation rate. Monthly total = value x days in month. |
+| `T2M` | deg C | Mean air temperature at 2 m. |
+| `T2M_MAX` | deg C | Mean daily maximum temperature at 2 m. |
+| `T2M_MIN` | deg C | Mean daily minimum temperature at 2 m. |
+| `RH2M` | % | Relative humidity at 2 m. |
+| `ALLSKY_SFC_SW_DWN` | MJ/m2/day | All-sky surface shortwave downward irradiance (solar energy). |
+
+- Fill value `-999.0` is stored as null.
 - Annual rows (`YYYY13`) are dropped during normalization.
 
 ## NOAA ONI
 
 - Endpoint: `{cfg['enso']['url']}`
-- 3-month running mean sea surface temperature anomaly (ERSSTv5).
+- Index: Oceanic Nino Index (ONI)
+- Region: Nino 3.4 (5N-5S, 120W-170W)
+- Definition: 3-month running mean of sea-surface temperature anomalies
+- Source dataset: ERSSTv5
+- Base period: centered 30-year climatology, updated every five years;
+  current base 1991-2020
+- Units: degrees Celsius
+- File columns: `SEAS` (season), `YR` (year), `TOTAL` (absolute SST),
+  `ANOM` (anomaly)
+- Seasons are overlapping 3-month windows (`DJF`, `JFM`, ..., `NDJ`)
 
 ## PSGC classification
 
@@ -493,7 +513,7 @@ Center. NOAA CPC for the ONI. BetterGov.ph classification API for PSGC codes.
 
 ## Normalized files
 
-### production_long.csv
+### psa_production_long.csv
 Pineapple volume of production.
 
 | Column | Meaning |
@@ -512,18 +532,18 @@ Pineapple volume of production.
 | `value_raw` | original source string (`..`, `/s`, number) |
 | `value` | metric tons; null for `..` and other non-numeric markers |
 
-### area_long.csv
+### psa_area_long.csv
 Same schema as production; `value` is hectares. Quarterly cells are mostly
 null for pineapple; semester values are populated.
 
-### farmgate_long.csv
+### psa_farmgate_long.csv
 Same schema plus `commodity`; `value` is pesos per kilogram.
 
-### ppa_long.csv
+### psa_ppa_long.csv
 Same schema plus `sector` and `type_of_valuation`; `value` is thousand pesos.
 No region/province carry-forward: PPA geographies use a different label shape.
 
-### weather_long.csv
+### nasa_weather_long.csv
 
 | Column | Meaning |
 |---|---|
@@ -533,11 +553,49 @@ No region/province carry-forward: PPA geographies use a different label shape.
 | `unit` | source unit |
 | `value` | null when NASA returns -999.0 |
 
-Parameters: PRECTOTCORR (mm/day), T2M / T2M_MAX / T2M_MIN (deg C),
-RH2M (%), ALLSKY_SFC_SW_DWN (MJ/m2/day).
+Parameter descriptions:
 
-### enso_long.csv
-`season` (DJF, JFM, ...), `year`, `total`, `anomaly` from NOAA ONI.
+| Parameter | Unit | Description |
+|---|---|---|
+| `PRECTOTCORR` | mm/day | Bias-corrected precipitation rate. Monthly total = value x days in month; semester total = sum of monthly totals. |
+| `T2M` | deg C | Mean air temperature at 2 m. |
+| `T2M_MAX` | deg C | Mean daily maximum temperature at 2 m. |
+| `T2M_MIN` | deg C | Mean daily minimum temperature at 2 m. |
+| `RH2M` | % | Relative humidity at 2 m. |
+| `ALLSKY_SFC_SW_DWN` | MJ/m2/day | All-sky surface shortwave downward irradiance (solar energy). |
+
+Notes:
+
+- Values are monthly means for the NASA POWER grid cell nearest the province centroid.
+- `PRECTOTCORR` is a rate: multiply by days in month before summing.
+- Temperature, humidity and solar are averaged over the semester.
+- `-999.0` is the missing-value fill and is stored as null.
+- The `YYYY13` annual row is dropped to avoid double counting.
+
+### noaa_enso_long.csv
+
+| Column | Meaning |
+|---|---|
+| `season` | 3-month window: `DJF`, `JFM`, `FMA`, ..., `NDJ` |
+| `year` | year of the middle month of the window |
+| `total` | absolute 3-month mean sea-surface temperature, deg C |
+| `anomaly` | departure from the climatological normal, deg C |
+
+Definitions:
+
+- ONI: 3-month running mean of SST anomalies in the Nino 3.4 region
+  (5N-5S, 120W-170W), ERSSTv5.
+- Base period: centered 30-year climatology updated every five years;
+  current base 1991-2020.
+- El Nino: `anomaly >= +0.5 deg C` for five consecutive overlapping seasons.
+- La Nina: `anomaly <= -0.5 deg C` for five consecutive overlapping seasons.
+- Neutral: between -0.5 and +0.5 deg C.
+- Magnitude: +/-0.5 weak, +/-1.0 moderate, +/-1.5 strong, +/-2.0 very strong.
+- Seasons overlap: each calendar month appears in three consecutive windows.
+  Do not sum adjacent seasons.
+- Non-overlapping semester mapping: S1 = mean(`JFM`, `AMJ`);
+  S2 = mean(`JAS`, `OND`).
+- Use `anomaly` as the feature.
 
 ## Reference files
 

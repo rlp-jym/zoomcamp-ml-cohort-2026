@@ -18,15 +18,35 @@ Retrieved by `src/run.py`. All raw files are byte-exact snapshots.
 ## NASA POWER
 
 - Endpoint: `https://power.larc.nasa.gov/api/temporal/monthly/point`
-- Parameters: PRECTOTCORR, T2M, T2M_MAX, T2M_MIN, RH2M, ALLSKY_SFC_SW_DWN
 - Community: `AG`
-- No API key required. `PRECTOTCORR` is mm/day. Fill value `-999.0` is null.
+- No API key required.
+- Monthly values for the grid cell nearest each province centroid.
+
+| Parameter | Unit | Description |
+|---|---|---|
+| `PRECTOTCORR` | mm/day | Bias-corrected precipitation rate. Monthly total = value x days in month. |
+| `T2M` | deg C | Mean air temperature at 2 m. |
+| `T2M_MAX` | deg C | Mean daily maximum temperature at 2 m. |
+| `T2M_MIN` | deg C | Mean daily minimum temperature at 2 m. |
+| `RH2M` | % | Relative humidity at 2 m. |
+| `ALLSKY_SFC_SW_DWN` | MJ/m2/day | All-sky surface shortwave downward irradiance (solar energy). |
+
+- Fill value `-999.0` is stored as null.
 - Annual rows (`YYYY13`) are dropped during normalization.
 
 ## NOAA ONI
 
 - Endpoint: `https://www.cpc.ncep.noaa.gov/data/indices/oni.ascii.txt`
-- 3-month running mean sea surface temperature anomaly (ERSSTv5).
+- Index: Oceanic Nino Index (ONI)
+- Region: Nino 3.4 (5N-5S, 120W-170W)
+- Definition: 3-month running mean of sea-surface temperature anomalies
+- Source dataset: ERSSTv5
+- Base period: centered 30-year climatology, updated every five years;
+  current base 1991-2020
+- Units: degrees Celsius
+- File columns: `SEAS` (season), `YR` (year), `TOTAL` (absolute SST),
+  `ANOM` (anomaly)
+- Seasons are overlapping 3-month windows (`DJF`, `JFM`, ..., `NDJ`)
 
 ## PSGC classification
 

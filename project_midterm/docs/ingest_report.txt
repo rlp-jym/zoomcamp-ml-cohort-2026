@@ -1,5 +1,5 @@
 INGEST REPORT
-generated_at_utc: 2026-11-09T19:49:18+00:00
+generated_at_utc: 2026-11-14T04:57:58+00:00
 
 RAW FILES
   data\raw\geoboundaries\PHL_ADM2.geojson  bytes=3,140,454  sha256=fa77b9f17db2e419...
@@ -107,12 +107,12 @@ RAW FILES
   data\raw\psgc\regions.json  bytes=15,307  sha256=0eb39a437be7d237...
 
 NORMALIZED FILES
-  area_long.csv  rows=13,090  cols=13  null_cells=10,126
-  enso_long.csv  rows=921  cols=4  null_cells=0
-  farmgate_long.csv  rows=73,593  cols=13  null_cells=76,346
-  ppa_long.csv  rows=34,560  cols=11  null_cells=544
-  production_long.csv  rows=13,090  cols=13  null_cells=5,182
-  weather_long.csv  rows=116,100  cols=7  null_cells=1,260
+  nasa_weather_long.csv  rows=116,100  cols=7  null_cells=1,260
+  noaa_enso_long.csv  rows=921  cols=4  null_cells=0
+  psa_area_long.csv  rows=13,090  cols=13  null_cells=10,126
+  psa_farmgate_long.csv  rows=73,593  cols=13  null_cells=76,346
+  psa_ppa_long.csv  rows=34,560  cols=11  null_cells=544
+  psa_production_long.csv  rows=13,090  cols=13  null_cells=5,182
 
 PROVINCE REFERENCE
   units=90
