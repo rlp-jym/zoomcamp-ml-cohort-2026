@@ -9,6 +9,7 @@ import xgboost as xgb
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import root_mean_squared_error
 from sklearn.pipeline import Pipeline
+from sklearn.tree import DecisionTreeRegressor
 
 BASE = Path(__file__).resolve().parent
 DATA = BASE / "data" / "normalized"
@@ -140,9 +141,8 @@ def main() -> None:
     # honest holdout metric on a throwaway model
     holdout = Pipeline([
         ("impute", SimpleImputer(strategy="constant", fill_value=0)),
-        ("xgb", xgb.XGBRegressor(
-            n_estimators=110, max_depth=4, min_child_weight=50,
-            learning_rate=0.05, random_state=9,
+        ("tree", DecisionTreeRegressor(
+            max_depth=6, min_samples_leaf=10, random_state=9,
         )),
     ])
     holdout.fit(
@@ -157,9 +157,8 @@ def main() -> None:
     # final model uses every row
     model = Pipeline([
         ("impute", SimpleImputer(strategy="constant", fill_value=0)),
-        ("xgb", xgb.XGBRegressor(
-            n_estimators=110, max_depth=4, min_child_weight=50,
-            learning_rate=0.05, random_state=9,
+        ("tree", DecisionTreeRegressor(
+            max_depth=6, min_samples_leaf=10, random_state=9,
         )),
     ])
     model.fit(df[FINAL_FEATS], np.log1p(df["yield"]))
@@ -176,10 +175,10 @@ def main() -> None:
     print(f"{'rows':<18} {len(df)}")
     print(f"{'features':<18} {len(FINAL_FEATS)}")
     print(f"{'train / val / test':<18} {len(train)} / {len(val)} / {len(test)}")
-    print(f"{'model':<18} XGBoost (depth 4, child 50)")
+    print(f"{'model':<18} DecisionTree (depth 6, leaf 10)")
     print()
-    print(f"{'XGBoost RMSE':<18} {rmse_log:.3f}  (log1p, test)")
-    print(f"{'XGBoost RMSE':<18} {rmse_mt:.2f}   mt/ha  (test)")
+    print(f"{'DecisionTree RMSE':<18} {rmse_log:.3f}  (log1p, test)")
+    print(f"{'DecisionTree RMSE':<18} {rmse_mt:.2f}   mt/ha  (test)")
     print(f"{'baseline RMSE':<18} {base_log:.3f}  (log1p, yield_prev2)")
     print()
     print(f"{'saved':<18} pineapple_yield_prediction/model/{out.name}")
